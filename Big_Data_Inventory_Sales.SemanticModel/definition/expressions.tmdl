@@ -1,0 +1,12 @@
+expression 'Country Colors' =
+		let
+		    Source = Csv.Document(File.Contents("C:\Users\Rafael\Documents\GitHub\Big Inventory Data\Country Colors.csv"),[Delimiter=",", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+		    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}, {"Column2", type text}})
+		in
+		    #"Changed Type"
+	lineageTag: 491dd6eb-ed90-4797-b399-10d1c3226009
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

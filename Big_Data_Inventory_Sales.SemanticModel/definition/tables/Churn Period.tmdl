@@ -1,0 +1,39 @@
+table 'Churn Period'
+	lineageTag: 466ba10b-1a65-4640-b7ae-eee5d6fd58b8
+
+	column Label
+		lineageTag: e1924b12-7ac7-44e2-9ae1-aefbd7a39dd7
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Label]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		formatString: 0
+		lineageTag: 864fa67d-ce3b-4e13-9767-25405d43870c
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Churn Period' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Label", STRING,
+				    "Value", INTEGER,
+				
+				    {
+				        {"1W", 14},
+				        {"1M", 30},
+				        {"3M", 90},
+				        {"6M", 180},
+				        {"1Y", 365.24}
+				    }
+				)
+
+	annotation PBI_Id = b89ef4803baf4c46b17b236b8e33c486
+

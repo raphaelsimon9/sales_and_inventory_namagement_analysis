@@ -1,0 +1,24 @@
+table 'Refresh Timestamp'
+	lineageTag: 492cbb2c-40cb-497f-ba59-95ba29b82a76
+
+	column 'Refresh Timestamp'
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 647d0c40-df21-4149-9d96-7c3f286dc089
+		summarizeBy: none
+		sourceColumn: Refresh Timestamp
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Refresh Timestamp' = m
+		mode: import
+		source =
+				let
+				    Source = DateTime.LocalNow()
+				in
+				    Source
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = DateTime
+

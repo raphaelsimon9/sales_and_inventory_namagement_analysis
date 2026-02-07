@@ -1,0 +1,517 @@
+table sales
+	lineageTag: 08c3d125-6ba5-4882-a435-8da1439ec7c0
+
+	column orderId
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 68e7f385-acbc-495f-8c0f-91af85cdeccd
+		summarizeBy: none
+		sourceColumn: orderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column invoiceNumber
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: eb44fbf8-a554-4e1a-bd13-f516ca7f4b7d
+		summarizeBy: none
+		sourceColumn: invoiceNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column orderDate
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 91e37551-d801-482e-a148-ca05893fab25
+		summarizeBy: none
+		sourceColumn: orderDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column orderTime
+		dataType: dateTime
+		formatString: Long Time
+		sourceProviderType: time
+		lineageTag: bc6afed4-84fd-415b-a4e2-ad9f33b6761c
+		summarizeBy: none
+		sourceColumn: orderTime
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column customerId
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 8502aa9e-50f7-45bb-beb3-5265493c5c24
+		summarizeBy: none
+		sourceColumn: customerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column customerName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 3aad980b-c3e7-484c-8b83-223c60a3f78b
+		summarizeBy: none
+		sourceColumn: customerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column customerType
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 3dbbb49c-7fbb-4721-b52c-8de764573f28
+		summarizeBy: none
+		sourceColumn: customerType
+
+		annotation SummarizationSetBy = Automatic
+
+	column customerCountry
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: acd1948f-5598-4752-b66f-b5805e5eb1cf
+		summarizeBy: none
+		sourceColumn: customerCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column customerCity
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: f6b93b50-b9e3-435e-90d9-a121c74d8d31
+		summarizeBy: none
+		sourceColumn: customerCity
+
+		annotation SummarizationSetBy = Automatic
+
+	column customerRegion
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: c5b01b1d-e18c-4f06-9764-1c33098cf11a
+		summarizeBy: none
+		sourceColumn: customerRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column salespersonId
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: fd09a378-6e50-4657-90a8-e1896637590e
+		summarizeBy: none
+		sourceColumn: salespersonId
+
+		annotation SummarizationSetBy = Automatic
+
+	column salespersonName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 31b6adc9-d1b6-451e-a72c-3d11a236aa6e
+		summarizeBy: none
+		sourceColumn: salespersonName
+
+		annotation SummarizationSetBy = Automatic
+
+	column managerId
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 237ea9e8-f085-4c29-b036-3c7c2af58df1
+		summarizeBy: none
+		sourceColumn: managerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column managerName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: fe50a336-eb3c-4c8f-8303-b0435a615b72
+		summarizeBy: none
+		sourceColumn: managerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column salesRegion
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: e8b32a15-16cb-42b7-9011-0cbca6a22fc6
+		summarizeBy: none
+		sourceColumn: salesRegion
+
+		annotation SummarizationSetBy = Automatic
+
+	column salesCountry
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 76a29a95-7872-4ec8-b70c-be219ec0207e
+		summarizeBy: none
+		sourceColumn: salesCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column salesCity
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 62b3a327-a84b-4d12-bf2b-9f08d1a025df
+		summarizeBy: none
+		sourceColumn: salesCity
+
+		annotation SummarizationSetBy = Automatic
+
+	column orderStatus
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 3e9df1ea-b870-407a-8f91-614bf8c1cf4f
+		summarizeBy: none
+		sourceColumn: orderStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column paymentMethod
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: c2d4dc00-0c9f-4b07-8ee5-3eb4bae73c97
+		summarizeBy: none
+		sourceColumn: paymentMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column paymentStatus
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 9988ebf8-3e97-41bc-8237-662654c19bd4
+		summarizeBy: none
+		sourceColumn: paymentStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column paymentTerms
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 1525f1da-e34c-46a9-8b9c-0848d495d769
+		summarizeBy: none
+		sourceColumn: paymentTerms
+
+		annotation SummarizationSetBy = Automatic
+
+	column shippingMethod
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: e6eae025-0b73-40f3-8103-49b266e1a1a1
+		summarizeBy: none
+		sourceColumn: shippingMethod
+
+		annotation SummarizationSetBy = Automatic
+
+	column shippingCity
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 57a6a85b-0edf-4747-a077-fb0cb87a74ab
+		summarizeBy: none
+		sourceColumn: shippingCity
+
+		annotation SummarizationSetBy = Automatic
+
+	column shippingCountry
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 0ebb2a94-12a4-4ae6-9907-fe29ff7a9746
+		summarizeBy: none
+		sourceColumn: shippingCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column billingCity
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 038e2e11-4237-46c4-a2e1-cbfb10a2d395
+		summarizeBy: none
+		sourceColumn: billingCity
+
+		annotation SummarizationSetBy = Automatic
+
+	column billingCountry
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: ce211375-c7f4-487f-a5e0-78cd77e15c37
+		summarizeBy: none
+		sourceColumn: billingCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column itemCount
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: tinyint
+		lineageTag: 461ce916-9632-4044-9f8e-15464011ea08
+		summarizeBy: sum
+		sourceColumn: itemCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column totalQuantity
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: tinyint
+		lineageTag: 2d49ae1b-3154-448a-9041-8993d6d303ee
+		summarizeBy: sum
+		sourceColumn: totalQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column subtotal
+		dataType: double
+		isNullable: false
+		formatString: #,0
+		sourceProviderType: float
+		lineageTag: d580bb11-227d-4510-ad08-11476f9c60c1
+		summarizeBy: sum
+		sourceColumn: subtotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column taxAmount
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: 2e4db3b0-8362-4d32-b5af-7e8901c7ce85
+		summarizeBy: sum
+		sourceColumn: taxAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column shippingCost
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: e397b277-42db-4aa2-961b-74716250dc09
+		summarizeBy: sum
+		sourceColumn: shippingCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column totalAmount
+		dataType: double
+		isNullable: false
+		formatString: #,0
+		sourceProviderType: float
+		lineageTag: e0e55e2c-bf18-454a-aa56-221258685ef8
+		summarizeBy: sum
+		sourceColumn: totalAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column totalCost
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: 7de518bf-46bc-4678-92ed-3ec56c002fd1
+		summarizeBy: sum
+		sourceColumn: totalCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column profit
+		dataType: double
+		isNullable: false
+		formatString: #,0
+		sourceProviderType: float
+		lineageTag: 2583f08f-2ed3-40bc-9f6d-3d9ee567e891
+		summarizeBy: sum
+		sourceColumn: profit
+
+		annotation SummarizationSetBy = Automatic
+
+	column profitMargin
+		dataType: double
+		isNullable: false
+		formatString: #,0
+		sourceProviderType: float
+		lineageTag: 66c2145b-f207-4a41-930e-1ff30dac2cf2
+		summarizeBy: sum
+		sourceColumn: profitMargin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column commission
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: cea2e3c9-1621-4805-b686-df949afaeedd
+		summarizeBy: sum
+		sourceColumn: commission
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column currency
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 35a6c5bf-bb5a-4bc5-835b-60629acb4f98
+		summarizeBy: none
+		sourceColumn: currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column exchangeRate
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: 1221f578-a44b-4903-a509-f668b2c5c054
+		summarizeBy: sum
+		sourceColumn: exchangeRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column notes
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 43f70339-0fd1-4e19-a456-f8118bdde40b
+		summarizeBy: none
+		sourceColumn: notes
+
+		annotation SummarizationSetBy = Automatic
+
+	column shipDate
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: cf4cf517-a8c0-4ba9-8d92-51601fc2e23a
+		summarizeBy: none
+		sourceColumn: shipDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column estimatedDelivery
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 91c6b5c8-f1d3-4ac9-9ab5-b56037655cfc
+		summarizeBy: none
+		sourceColumn: estimatedDelivery
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column actualDelivery
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: aae8801d-75a0-4978-bdd7-8ca9984ac611
+		summarizeBy: none
+		sourceColumn: actualDelivery
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column trackingNumber
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 6fddecb9-8191-404a-8e9d-314ed6060b95
+		summarizeBy: none
+		sourceColumn: trackingNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column carrier
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 0833371d-68e2-4db3-b4d9-8506febde1e4
+		summarizeBy: none
+		sourceColumn: carrier
+
+		annotation SummarizationSetBy = Automatic
+
+	column returnReason
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: ec4ccb3c-7a74-4747-8f15-1ab1bbc89328
+		summarizeBy: none
+		sourceColumn: returnReason
+
+		annotation SummarizationSetBy = Automatic
+
+	column source
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 92e68846-a7a2-4f2d-b003-37c8ea30a6c2
+		summarizeBy: none
+		sourceColumn: source
+
+		annotation SummarizationSetBy = Automatic
+
+	column channel
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 3b0c841c-ea28-44c0-ac3a-9491b0bce52c
+		summarizeBy: none
+		sourceColumn: channel
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sales = m
+		mode: dual
+		source =
+				let
+				    Source = Sql.Database("RAFAEL", "inventory_sales_report"),
+				    dbo_sales = Source{[Schema="dbo",Item="sales"]}[Data],
+				    #"Removed Columns" = Table.RemoveColumns(dbo_sales,{"billingAddress", "returnRequested", "shippingAddress"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

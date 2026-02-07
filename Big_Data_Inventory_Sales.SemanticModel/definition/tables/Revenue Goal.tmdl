@@ -1,0 +1,28 @@
+table 'Revenue Goal'
+	lineageTag: 9aeee978-2834-42de-a1fc-a9169665e814
+
+	measure 'Revenue Goal Value' =
+			
+			SELECTEDVALUE ( 'Revenue Goal'[Revenue Goal], 50000000 )
+		formatString: 0
+		lineageTag: d343f4a4-9819-4ec4-8c49-c24a3d8a14c8
+
+	column 'Revenue Goal'
+		formatString: 0
+		lineageTag: 0bb2e2c7-32b8-40f8-b3d8-fb5f0e1dd076
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Revenue Goal' = calculated
+		mode: import
+		source = GENERATESERIES(0, 10000000000, 1000000)
+
+	annotation PBI_Id = 618b2e0e4c3d4bdd8d33113881a32fe1
+

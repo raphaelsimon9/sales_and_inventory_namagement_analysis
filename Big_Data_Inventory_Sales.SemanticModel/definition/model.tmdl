@@ -1,0 +1,39 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_QueryOrder = ["sales","sales_items","products","customers","salespeople","managers","All Measures","Country Colors","Refresh Timestamp"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+annotation __TEdtr = 1
+
+ref table sales
+ref table sales_items
+ref table products
+ref table customers
+ref table salespeople
+ref table managers
+ref table Calendar
+ref table 'All Measures'
+ref table Date(Date)
+ref table 'Time Period'
+ref table 'Top N Products (By Revenue)'
+ref table 'Top N'
+ref table 'Top N Products (By Sales Quantity)'
+ref table 'Top N Products (By Profit)'
+ref table 'Percentage Adjustment'
+ref table 'Revenue Goal'
+ref table 'Measure Selection'
+ref table 'Dynamic Rev, Unit, Prof, Line'
+ref table 'Churn Period'
+ref table 'Refresh Timestamp'
+
+ref cultureInfo en-US
+

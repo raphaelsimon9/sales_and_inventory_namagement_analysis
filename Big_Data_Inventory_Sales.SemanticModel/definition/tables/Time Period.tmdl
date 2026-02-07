@@ -1,0 +1,44 @@
+table 'Time Period'
+	isHidden
+	lineageTag: 80fc761a-7830-41e5-b3c5-5cb316afe10f
+
+	column Label
+		isHidden
+		lineageTag: efa76488-0554-401b-b1f2-703988d59d86
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Label]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Data
+		isHidden
+		formatString: 0
+		lineageTag: 91ccbcae-2430-4fdb-b10f-0924fc2903fa
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Data]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Time Period' = calculated
+		mode: import
+		source = ```
+				
+				DATATABLE(
+				    "Label", STRING,
+				    "Data", INTEGER,
+				
+				    {
+				        {"1W", 14},
+				        {"1M", 30},
+				        {"3M", 90},
+				        {"6M", 180},
+				        {"1Y", 365.24}
+				    }
+				)
+				
+				```
+
+	annotation PBI_Id = 94abc87cb6524a8885ad12d694d4b3b5
+

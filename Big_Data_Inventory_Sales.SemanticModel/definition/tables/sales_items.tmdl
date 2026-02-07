@@ -1,0 +1,277 @@
+table sales_items
+	lineageTag: 5855d3cd-9ab8-4d9b-8e76-a8be7d7be837
+
+	column lineItemId
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 5693f137-21ea-4cff-ab5d-ed5e55265e0d
+		summarizeBy: none
+		sourceColumn: lineItemId
+
+		annotation SummarizationSetBy = Automatic
+
+	column orderId
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: ffeaf025-2bcc-4110-b324-28e1e62c2ea5
+		summarizeBy: none
+		sourceColumn: orderId
+
+		annotation SummarizationSetBy = Automatic
+
+	column invoiceNumber
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 2bf09685-a69a-4acc-849b-8e88de94825f
+		summarizeBy: none
+		sourceColumn: invoiceNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column orderDate
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 5df2e6f3-17e5-4def-9883-5f8b086c02a7
+		summarizeBy: none
+		sourceColumn: orderDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column customerId
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 90ce3629-a14d-4e7b-b123-283b861c5036
+		summarizeBy: none
+		sourceColumn: customerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column salespersonId
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: b96133ad-29a4-49d7-97ad-217b5b676242
+		summarizeBy: none
+		sourceColumn: salespersonId
+
+		annotation SummarizationSetBy = Automatic
+
+	column productId
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 880c29b2-6836-47f2-abf5-d1bfba0c356f
+		summarizeBy: none
+		sourceColumn: productId
+
+		annotation SummarizationSetBy = Automatic
+
+	column sku
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 49d74081-1388-45f0-9add-8f2a489ac719
+		summarizeBy: none
+		sourceColumn: sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column productName
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: c8b1d580-b208-457e-8faf-24198b34b8f2
+		summarizeBy: none
+		sourceColumn: productName
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 5ccbd3a2-19fa-4de6-8e14-cd598667fb3e
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcategory
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 5d1e0242-6829-48ef-9dd2-88ed4f746d7f
+		summarizeBy: none
+		sourceColumn: subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 1aa7f6ab-e8e0-422f-9a02-35c0e187d83a
+		summarizeBy: none
+		sourceColumn: brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column quantity
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: tinyint
+		lineageTag: 6026791e-7261-4985-b325-0478d9bb0fc8
+		summarizeBy: sum
+		sourceColumn: quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column unitPrice
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: de3b8af5-0889-40c3-a895-dc866f816c50
+		summarizeBy: sum
+		sourceColumn: unitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column costPrice
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: e5a82d08-4ff5-4666-8c84-20deae8dbe4c
+		summarizeBy: sum
+		sourceColumn: costPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discountPercent
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: f99a4754-861c-455b-a72d-9d0604abf14b
+		summarizeBy: sum
+		sourceColumn: discountPercent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column discountAmount
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: 3e536896-87c3-461e-a200-ae8905913758
+		summarizeBy: sum
+		sourceColumn: discountAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column lineTotal
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: 18afc3a0-d22b-47ea-9968-29610adef819
+		summarizeBy: sum
+		sourceColumn: lineTotal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column taxAmount
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: e9e139cc-0bcc-4420-b141-68d9a9ca948f
+		summarizeBy: sum
+		sourceColumn: taxAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column warehouse
+		dataType: string
+		isNullable: false
+		sourceProviderType: nvarchar(50)
+		lineageTag: 71824a53-9429-4d11-b478-c913628bb533
+		summarizeBy: none
+		sourceColumn: warehouse
+
+		annotation SummarizationSetBy = Automatic
+
+	column margin
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: 18127c34-c708-4805-8619-d09f46393384
+		summarizeBy: sum
+		sourceColumn: margin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column marginPercent
+		dataType: double
+		isNullable: false
+		sourceProviderType: float
+		lineageTag: fa239bfe-ca1d-4548-86f7-bec00db83d14
+		summarizeBy: sum
+		sourceColumn: marginPercent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column taxRate
+		dataType: double
+		sourceProviderType: decimal(3, 2)
+		lineageTag: 6a7f5ed3-b9f8-43a5-95ae-245eaec267ef
+		summarizeBy: sum
+		sourceColumn: taxRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Total Revenue (lineTotal & taxAmount)' =
+			
+			sales_items[lineTotal] + sales_items[taxAmount]
+		formatString: \$#,0;(\$#,0);\$#,0
+		lineageTag: 4e1ceeda-bec0-4965-8069-0ce783125271
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sales_items = m
+		mode: dual
+		source =
+				let
+				    Source = Sql.Database("RAFAEL", "inventory_sales_report"),
+				    dbo_sales_items = Source{[Schema="dbo",Item="sales_items"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(dbo_sales_items,{{"taxRate", type number}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"barcode"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

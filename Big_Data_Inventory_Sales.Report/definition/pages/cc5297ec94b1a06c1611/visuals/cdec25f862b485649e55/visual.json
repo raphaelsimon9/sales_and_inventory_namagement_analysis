@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "cdec25f862b485649e55",
+  "position": {
+    "x": 847.20104795368206,
+    "y": 208.14525362801243,
+    "z": 20000,
+    "height": 116,
+    "width": 225,
+    "tabOrder": 2000
+  },
+  "visualGroup": {
+    "displayName": "YTD Units Sold Group",
+    "groupMode": "ScaleMode"
+  }
+}

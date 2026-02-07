@@ -1,0 +1,197 @@
+table salespeople
+	lineageTag: 8134b5dc-d077-433d-9ae8-093db8bba8b1
+
+	column salespersonId
+		dataType: string
+		lineageTag: 1cd403e3-2a92-438c-a623-f3ea9f9647cb
+		summarizeBy: none
+		sourceColumn: salespersonId
+
+		annotation SummarizationSetBy = Automatic
+
+	column firstName
+		dataType: string
+		lineageTag: dd5dd7be-7830-4cbd-b85a-aac52778d0ea
+		summarizeBy: none
+		sourceColumn: firstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastName
+		dataType: string
+		lineageTag: f6cea3f9-54b3-4d51-9837-77991d4878fe
+		summarizeBy: none
+		sourceColumn: lastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column fullName
+		dataType: string
+		lineageTag: cffc720e-4b79-4dd0-8c30-1b66f751812f
+		summarizeBy: none
+		sourceColumn: fullName
+
+		annotation SummarizationSetBy = Automatic
+
+	column culture
+		dataType: string
+		lineageTag: 4e65a4f1-f5a7-4ece-8d83-989fcce2dad1
+		summarizeBy: none
+		sourceColumn: culture
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 9abd968f-4262-4c2c-8a5f-3a391d01f6e7
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column phone
+		dataType: string
+		lineageTag: 9365e934-2c3a-460f-bcae-0155a5673d40
+		summarizeBy: none
+		sourceColumn: phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column hireDate
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 62c98c8d-7df4-41b5-8c46-0ae881a2a5e6
+		summarizeBy: none
+		sourceColumn: hireDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column region
+		dataType: string
+		lineageTag: 00aea9c2-cf0b-46bb-8d84-e7f8a24c4ffe
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: 1da65e34-9b6e-4cd2-b28c-8f663057e80b
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 04431072-3cba-415a-897a-e113d974a7a9
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column managerId
+		dataType: string
+		lineageTag: 161435a8-1fca-436d-b329-65794821c8b6
+		summarizeBy: none
+		sourceColumn: managerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column managerName
+		dataType: string
+		lineageTag: b1cc3e56-2205-42dd-a8f5-338fbdef3db3
+		summarizeBy: none
+		sourceColumn: managerName
+
+		annotation SummarizationSetBy = Automatic
+
+	column commissionRate
+		dataType: double
+		lineageTag: 04de2330-549e-4499-8aa6-d497cc87a1cf
+		summarizeBy: sum
+		sourceColumn: commissionRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column performanceRating
+		dataType: double
+		lineageTag: 9449741a-11e2-4809-aa8d-0451f671c9be
+		summarizeBy: sum
+		sourceColumn: performanceRating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column yearsExperience
+		dataType: int64
+		formatString: 0
+		lineageTag: 215d3dd6-c7fc-444f-8679-d18bfd3c0bb9
+		summarizeBy: sum
+		sourceColumn: yearsExperience
+
+		annotation SummarizationSetBy = Automatic
+
+	column salesTarget
+		dataType: int64
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 7ba878b9-dd3c-4172-9eb1-6e7f0fbe8600
+		summarizeBy: sum
+		sourceColumn: salesTarget
+
+		annotation SummarizationSetBy = Automatic
+
+	column achievementPercent
+		dataType: double
+		lineageTag: 6c2c1596-7e1d-4b1b-8dac-e705306951c0
+		summarizeBy: sum
+		sourceColumn: achievementPercent
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column employmentStatus
+		dataType: string
+		lineageTag: c10b4656-56a3-43c3-8655-89e187020291
+		summarizeBy: none
+		sourceColumn: employmentStatus
+
+		annotation SummarizationSetBy = Automatic
+
+	column languagesSpoken
+		dataType: string
+		lineageTag: 1ceaa24e-cff6-4e75-83e1-2333db962f7f
+		summarizeBy: none
+		sourceColumn: languagesSpoken
+
+		annotation SummarizationSetBy = Automatic
+
+	column certifications
+		dataType: string
+		lineageTag: 9455584e-c939-4985-bff1-f705a3355bff
+		summarizeBy: none
+		sourceColumn: certifications
+
+		annotation SummarizationSetBy = Automatic
+
+	partition salespeople = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Rafael\Documents\GitHub\Big Inventory Data\salespeople.csv"),[Delimiter=",", Columns=22, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"salespersonId", type text}, {"firstName", type text}, {"lastName", type text}, {"fullName", type text}, {"culture", type text}, {"email", type text}, {"phone", type text}, {"hireDate", type date}, {"region", type text}, {"country", type text}, {"city", type text}, {"territory", type text}, {"managerId", type text}, {"managerName", type text}, {"commissionRate", type number}, {"performanceRating", type number}, {"yearsExperience", Int64.Type}, {"salesTarget", Int64.Type}, {"achievementPercent", type number}, {"employmentStatus", type text}, {"languagesSpoken", type text}, {"certifications", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"territory"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

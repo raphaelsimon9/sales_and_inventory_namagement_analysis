@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "58f207cb29f8910b066c",
+  "position": {
+    "x": 182,
+    "y": 174,
+    "z": 9000,
+    "height": 525,
+    "width": 880,
+    "tabOrder": 8000
+  },
+  "visualGroup": {
+    "displayName": "Profit Report Group",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

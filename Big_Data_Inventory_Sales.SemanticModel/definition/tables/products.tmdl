@@ -1,0 +1,357 @@
+table products
+	lineageTag: 3d2fbbb7-0333-4405-856b-69b5e89d5348
+
+	column productId
+		dataType: string
+		lineageTag: d7f9801e-ca9a-4b0b-a3b5-a2eacd7f27e2
+		summarizeBy: none
+		sourceColumn: productId
+
+		annotation SummarizationSetBy = Automatic
+
+	column sku
+		dataType: string
+		lineageTag: 1f97e93e-2990-4f5b-8ba1-c0b671dba853
+		summarizeBy: none
+		sourceColumn: sku
+
+		annotation SummarizationSetBy = Automatic
+
+	column barcode
+		dataType: int64
+		formatString: 0
+		lineageTag: dc86ddcf-e8b2-43e5-a609-20326eb047ec
+		summarizeBy: none
+		sourceColumn: barcode
+
+		annotation SummarizationSetBy = Automatic
+
+	column productName
+		dataType: string
+		lineageTag: 368ee3db-ee19-475e-b11a-7fb8e9c091f9
+		summarizeBy: none
+		sourceColumn: productName
+
+		annotation SummarizationSetBy = Automatic
+
+	column description
+		dataType: string
+		lineageTag: 974cb4e9-9c07-459f-8c6d-464c10b16d47
+		summarizeBy: none
+		sourceColumn: description
+
+		annotation SummarizationSetBy = Automatic
+
+	column category
+		dataType: string
+		lineageTag: 257b7418-484b-405c-b9f2-c7ea5f5b284d
+		summarizeBy: none
+		sourceColumn: category
+
+		annotation SummarizationSetBy = Automatic
+
+	column subcategory
+		dataType: string
+		lineageTag: be60e097-3f8a-40a9-afd7-fce9cdc850a5
+		summarizeBy: none
+		sourceColumn: subcategory
+
+		annotation SummarizationSetBy = Automatic
+
+	column brand
+		dataType: string
+		lineageTag: 4b7b48dd-05d1-4a70-b397-68d4a931772c
+		summarizeBy: none
+		sourceColumn: brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column manufacturer
+		dataType: string
+		lineageTag: dcc5e363-16dd-47aa-b1da-227e8adecc2b
+		summarizeBy: none
+		sourceColumn: manufacturer
+
+		annotation SummarizationSetBy = Automatic
+
+	column unitPrice
+		dataType: double
+		lineageTag: 487908b9-89de-441f-a5c2-e3574f7b138a
+		summarizeBy: none
+		sourceColumn: unitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column costPrice
+		dataType: double
+		lineageTag: 4fca837a-d5cc-4cbd-b661-536e4572910f
+		summarizeBy: none
+		sourceColumn: costPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column msrp
+		dataType: double
+		lineageTag: 7e70d8fc-0dbc-46a6-9e48-548e84e2763f
+		summarizeBy: none
+		sourceColumn: msrp
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column supplier
+		dataType: string
+		lineageTag: d544310b-d071-4d63-8eee-10984f249d6f
+		summarizeBy: none
+		sourceColumn: supplier
+
+		annotation SummarizationSetBy = Automatic
+
+	column supplierSku
+		dataType: string
+		lineageTag: 6ef385c8-e703-47a1-983c-0c594d404529
+		summarizeBy: none
+		sourceColumn: supplierSku
+
+		annotation SummarizationSetBy = Automatic
+
+	column weight
+		dataType: double
+		lineageTag: 07139838-abb8-4121-88b0-f28d40722b56
+		summarizeBy: none
+		sourceColumn: weight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column weightUnit
+		dataType: string
+		lineageTag: a851f375-5d68-4128-9b26-ead7668c7dd6
+		summarizeBy: none
+		sourceColumn: weightUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column dimensions
+		dataType: string
+		lineageTag: 7a8d1415-596e-4ad7-8bfe-3486b75e218e
+		summarizeBy: none
+		sourceColumn: dimensions
+
+		annotation SummarizationSetBy = Automatic
+
+	column dimensionUnit
+		dataType: string
+		lineageTag: 77df2e4b-76a2-4be8-9de4-0dbb00ff8cc8
+		summarizeBy: none
+		sourceColumn: dimensionUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column color
+		dataType: string
+		lineageTag: d3467b10-5813-435e-8af7-ae33ef29c90c
+		summarizeBy: none
+		sourceColumn: color
+
+		annotation SummarizationSetBy = Automatic
+
+	column size
+		dataType: string
+		lineageTag: 29d580e6-fea0-43a5-b93e-453a6d1936d5
+		summarizeBy: none
+		sourceColumn: size
+
+		annotation SummarizationSetBy = Automatic
+
+	column material
+		dataType: string
+		lineageTag: 43c2e6d0-26e1-4181-bb29-66a68e39a73e
+		summarizeBy: none
+		sourceColumn: material
+
+		annotation SummarizationSetBy = Automatic
+
+	column stockQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: a57b0478-0327-4d2a-a2cb-95794ed341a8
+		summarizeBy: none
+		sourceColumn: stockQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column reservedQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 044a3ba5-caa9-4dea-8acc-a192027eb1d6
+		summarizeBy: none
+		sourceColumn: reservedQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column availableQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: a3331f68-d0a9-4bbc-a28d-20757fec7982
+		summarizeBy: none
+		sourceColumn: availableQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column reorderLevel
+		dataType: int64
+		formatString: 0
+		lineageTag: d02a3d29-41b7-4c1e-986e-ed7286831b65
+		summarizeBy: none
+		sourceColumn: reorderLevel
+
+		annotation SummarizationSetBy = Automatic
+
+	column reorderQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 178ddda1-e559-41ad-8cc4-98c8989b1b92
+		summarizeBy: none
+		sourceColumn: reorderQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column minOrderQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: f6edc571-c8f7-41aa-95ed-73e4570c2de1
+		summarizeBy: none
+		sourceColumn: minOrderQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column maxOrderQuantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 2c70d628-38e0-40aa-8edb-a7172529c4c2
+		summarizeBy: none
+		sourceColumn: maxOrderQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column warehouse
+		dataType: string
+		lineageTag: a78daa66-bbd8-4242-9423-b8acf2a7ba50
+		summarizeBy: none
+		sourceColumn: warehouse
+
+		annotation SummarizationSetBy = Automatic
+
+	column aisle
+		dataType: string
+		lineageTag: e1ccde71-d0ae-42f0-8d85-cc2d69873a90
+		summarizeBy: none
+		sourceColumn: aisle
+
+		annotation SummarizationSetBy = Automatic
+
+	column shelf
+		dataType: string
+		lineageTag: dd73bd58-d971-4da5-85e3-0f7d46d80ade
+		summarizeBy: none
+		sourceColumn: shelf
+
+		annotation SummarizationSetBy = Automatic
+
+	column bin
+		dataType: string
+		lineageTag: 4c132f7a-c91d-46e2-99f0-55ab128b418d
+		summarizeBy: none
+		sourceColumn: bin
+
+		annotation SummarizationSetBy = Automatic
+
+	column warrantyMonths
+		dataType: int64
+		formatString: 0
+		lineageTag: e4731c24-ac89-4b93-a91d-3418cbe7e1aa
+		summarizeBy: none
+		sourceColumn: warrantyMonths
+
+		annotation SummarizationSetBy = Automatic
+
+	column returnPolicy
+		dataType: int64
+		formatString: 0
+		lineageTag: 1e228b55-de6c-4ab7-b430-a1dafd6a20cf
+		summarizeBy: none
+		sourceColumn: returnPolicy
+
+		annotation SummarizationSetBy = Automatic
+
+	column isActive
+		dataType: string
+		lineageTag: c9558aad-a8ce-41fc-be90-e1e3801cf38c
+		summarizeBy: none
+		sourceColumn: isActive
+
+		annotation SummarizationSetBy = Automatic
+
+	column isFeatured
+		dataType: string
+		lineageTag: 05534017-921b-40ce-ac09-5aa33da7fe94
+		summarizeBy: none
+		sourceColumn: isFeatured
+
+		annotation SummarizationSetBy = Automatic
+
+	column isOnSale
+		dataType: string
+		lineageTag: 079a443e-696f-482d-978b-8311c425b01b
+		summarizeBy: none
+		sourceColumn: isOnSale
+
+		annotation SummarizationSetBy = Automatic
+
+	column rating
+		dataType: double
+		lineageTag: cf9b1db3-29b6-4eea-86f5-9f0ea346be2f
+		summarizeBy: none
+		sourceColumn: rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column reviewCount
+		dataType: int64
+		formatString: 0
+		lineageTag: 057102e5-b0d3-4065-8140-70c187687d5c
+		summarizeBy: none
+		sourceColumn: reviewCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column tags
+		dataType: string
+		lineageTag: 6788820d-e93e-4652-8d22-ded1c2437c95
+		summarizeBy: none
+		sourceColumn: tags
+
+		annotation SummarizationSetBy = Automatic
+
+	partition products = m
+		mode: import
+		source =
+				let
+				    Source = MySQL.Database("localhost", "inventory_sales_report", [ReturnSingleDatabase=true]),
+				    inventory_sales_report_products = Source{[Schema="inventory_sales_report",Item="products"]}[Data]
+				in
+				    inventory_sales_report_products
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

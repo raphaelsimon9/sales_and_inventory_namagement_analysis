@@ -1,0 +1,132 @@
+table Calendar
+	lineageTag: 16f968a2-e75f-4102-864e-722ba11ead14
+	dataCategory: Time
+
+	column Date
+		isKey
+		formatString: Short Date
+		lineageTag: a18163b2-bced-4c36-8ebf-713f02c1e40a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Start Of Quarter' =
+			
+			STARTOFQUARTER('Calendar'[Date])
+		formatString: Short Date
+		lineageTag: 66970f33-3bbe-4940-94f4-c38a2b2b0834
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Start Of Month' =
+			
+			STARTOFMONTH('Calendar'[Date])
+		formatString: Short Date
+		lineageTag: 05162084-db80-439f-8dbc-3472dc2fea6f
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Quarter =
+			
+			QUARTER('Calendar'[Date])
+		formatString: 0
+		lineageTag: 25d76d45-da50-458d-9c07-6d6feed31812
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year =
+			
+			YEAR('Calendar'[Date])
+		formatString: 0
+		lineageTag: 7a231a34-d804-4578-954c-710527146ebc
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month =
+			
+			MONTH('Calendar'[Date])
+		formatString: 0
+		lineageTag: f8a4940f-528c-428e-a8e3-1e6250f18872
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Quarter Name' =
+			
+			"Q" & QUARTER('Calendar'[Date])
+		lineageTag: 93a4aa69-1125-491f-8b75-9d7929621504
+		summarizeBy: none
+		sortByColumn: Quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Week =
+			
+			WEEKNUM('Calendar'[Date], 11)
+		formatString: 0
+		lineageTag: c0c888e0-1a91-4a4b-a915-d5a15156375a
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday =
+			
+			WEEKDAY('Calendar'[Date], 2)
+		formatString: 0
+		lineageTag: ac3d93b4-2ee4-4755-9410-d313fb3be249
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Num' =
+			
+			DAY('Calendar'[Date])
+		formatString: 0
+		lineageTag: cb12a058-e5bb-4b79-8419-7626d816f730
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name' =
+			
+			FORMAT('Calendar'[Date], "mmm")
+		lineageTag: de282000-68a7-4cce-a3bd-b8e7db0e22a3
+		summarizeBy: none
+		sortByColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Day Name' =
+			
+			FORMAT('Calendar'[Date], "ddd")
+		lineageTag: 033c81af-3dcf-48c8-b17d-0aa32812387f
+		summarizeBy: none
+		sortByColumn: Weekday
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Calendar = calculated
+		mode: import
+		source = ```
+				
+				    CALENDAR(
+				        MIN(sales[orderDate]),
+				        MAX(sales[orderDate])
+				    )
+				
+				```
+
+	annotation PBI_Id = ced4fd688052423fac933ba48d22adf3
+

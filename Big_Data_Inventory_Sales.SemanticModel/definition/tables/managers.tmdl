@@ -1,0 +1,143 @@
+table managers
+	lineageTag: 4d6d6354-4d1c-4552-931f-851678adfc96
+
+	column managerId
+		dataType: string
+		lineageTag: 493eba66-97d5-4703-b053-45368d38ff26
+		summarizeBy: none
+		sourceColumn: managerId
+
+		annotation SummarizationSetBy = Automatic
+
+	column firstName
+		dataType: string
+		lineageTag: 0ea50127-f683-4a6c-a76d-66cf41201df5
+		summarizeBy: none
+		sourceColumn: firstName
+
+		annotation SummarizationSetBy = Automatic
+
+	column lastName
+		dataType: string
+		lineageTag: f5599787-7503-4dd2-9506-819c5af9aae7
+		summarizeBy: none
+		sourceColumn: lastName
+
+		annotation SummarizationSetBy = Automatic
+
+	column fullName
+		dataType: string
+		lineageTag: 55c06da8-96f3-4f09-ae1f-d8f9507f73ba
+		summarizeBy: none
+		sourceColumn: fullName
+
+		annotation SummarizationSetBy = Automatic
+
+	column culture
+		dataType: string
+		lineageTag: 457b03e8-ba41-41a5-ad70-2fbcbcbd892a
+		summarizeBy: none
+		sourceColumn: culture
+
+		annotation SummarizationSetBy = Automatic
+
+	column email
+		dataType: string
+		lineageTag: 520adcf0-4bad-4418-98cf-5d196bc3b1ec
+		summarizeBy: none
+		sourceColumn: email
+
+		annotation SummarizationSetBy = Automatic
+
+	column phone
+		dataType: string
+		lineageTag: 0af50021-8c22-4e7f-b272-10ae25c43072
+		summarizeBy: none
+		sourceColumn: phone
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: 6679066d-7bdc-4c21-9d8c-4166f5e24c03
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column country
+		dataType: string
+		lineageTag: bcc48d6f-8bc0-4f2a-9297-c7672cb8ae5c
+		summarizeBy: none
+		sourceColumn: country
+
+		annotation SummarizationSetBy = Automatic
+
+	column city
+		dataType: string
+		lineageTag: 83add417-370f-4806-a92c-979413e01bae
+		summarizeBy: none
+		sourceColumn: city
+
+		annotation SummarizationSetBy = Automatic
+
+	column hireDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 81a98e0b-ece9-40dd-abb4-e5ac4f546240
+		summarizeBy: none
+		sourceColumn: hireDate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column department
+		dataType: string
+		lineageTag: 0a0b0137-76cf-4ed1-9936-5f47d5b91c99
+		summarizeBy: none
+		sourceColumn: department
+
+		annotation SummarizationSetBy = Automatic
+
+	column performanceRating
+		dataType: double
+		lineageTag: 7a0cf27c-6b0a-4f8c-8581-7f7e20f760c7
+		summarizeBy: none
+		sourceColumn: performanceRating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column yearsExperience
+		dataType: int64
+		formatString: 0
+		lineageTag: 13bd3a6a-8d0c-4e5f-b360-f12776571094
+		summarizeBy: none
+		sourceColumn: yearsExperience
+
+		annotation SummarizationSetBy = Automatic
+
+	column reportsTo
+		dataType: string
+		lineageTag: 8f171616-0b94-4293-a72e-451e05fb954f
+		summarizeBy: none
+		sourceColumn: reportsTo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition managers = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Rafael\Documents\GitHub\Big Inventory Data\managers.csv"),[Delimiter=",", Columns=15, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"managerId", type text}, {"firstName", type text}, {"lastName", type text}, {"fullName", type text}, {"culture", type text}, {"email", type text}, {"phone", type text}, {"region", type text}, {"country", type text}, {"city", type text}, {"hireDate", type date}, {"department", type text}, {"performanceRating", type number}, {"yearsExperience", Int64.Type}, {"reportsTo", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

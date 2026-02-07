@@ -1,0 +1,55 @@
+table 'Top N Products (By Profit)'
+	isHidden
+	lineageTag: b32f2e8f-5440-4605-9160-ba993937e3f8
+
+	column productId
+		isHidden
+		lineageTag: 2853a873-0f63-4ce9-899a-7ae59d57822c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: sales_items[productId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column productName
+		isHidden
+		lineageTag: 990297fa-229e-4b76-af2b-3af588d590a6
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: sales_items[productName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Profit
+		isHidden
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: d7597c22-0527-4d0c-9da9-0017badd631f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Profit]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Top N Products (By Profit)' = calculated
+		mode: import
+		source = ```
+				
+				VAR chosen = SELECTEDVALUE('Top N'[Value])
+				
+				RETURN
+				TOPN(
+				    5,
+				    SUMMARIZE(
+				        sales_items,
+				        sales_items[productId],
+				        sales_items[productName],
+				        "Profit", SUM(sales_items[margin])
+				    ),
+				    [Profit],
+				    DESC
+				)
+				
+				```
+
+	annotation PBI_Id = 1d59bb17f5fc44f4a2fb578bed25c252
+

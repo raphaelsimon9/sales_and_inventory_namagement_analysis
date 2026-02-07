@@ -1,0 +1,176 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY25SU11",
+      "reportVersionAtImport": {
+        "visual": "2.4.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "AccessibleDefault",
+      "reportVersionAtImport": {
+        "visual": "2.4.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "publicCustomVisuals": [
+    "textFilter25A4896A83E0487089E2B90C9AE57C8A"
+  ],
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY25SU11",
+          "path": "BaseThemes/CY25SU11.json",
+          "type": "BaseTheme"
+        },
+        {
+          "name": "AccessibleDefault",
+          "path": "BuiltInThemes/AccessibleDefault.json",
+          "type": "CustomTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "Executive06152732329347255.svg",
+          "path": "Executive06152732329347255.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Sales17133066815864528.svg",
+          "path": "Sales17133066815864528.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Customer_Insights509454991158563.svg",
+          "path": "Customer_Insights509454991158563.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Sales_Person_Performance935604409788285.svg",
+          "path": "Sales_Person_Performance935604409788285.svg",
+          "type": "Image"
+        },
+        {
+          "name": "What-If_Analysis28601245606076764.svg",
+          "path": "What-If_Analysis28601245606076764.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Other_Reports028736204014088496.svg",
+          "path": "Other_Reports028736204014088496.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Other_Reports8490181008454003.svg",
+          "path": "Other_Reports8490181008454003.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Other_Reports4929347877040049.svg",
+          "path": "Other_Reports4929347877040049.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Executive_Dashboard_2366675819760511.svg",
+          "path": "Executive_Dashboard_2366675819760511.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Dollar_Sign6729132090642449.svg",
+          "path": "Dollar_Sign6729132090642449.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Money_Sign9996199059601611.svg",
+          "path": "Money_Sign9996199059601611.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Van_Sign7618931791017611.svg",
+          "path": "Van_Sign7618931791017611.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Dollar_Sign17383889773108863.svg",
+          "path": "Dollar_Sign17383889773108863.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Money_Sign03727764340322748.svg",
+          "path": "Money_Sign03727764340322748.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Van_Sign07817060335966974.svg",
+          "path": "Van_Sign07817060335966974.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Dollar_Sign7955531842822172.svg",
+          "path": "Dollar_Sign7955531842822172.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Executive_Background42074197654751625.svg",
+          "path": "Executive_Background42074197654751625.svg",
+          "type": "Image"
+        },
+        {
+          "name": "Other_Reports6185516009836869.svg",
+          "path": "Other_Reports6185516009836869.svg",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

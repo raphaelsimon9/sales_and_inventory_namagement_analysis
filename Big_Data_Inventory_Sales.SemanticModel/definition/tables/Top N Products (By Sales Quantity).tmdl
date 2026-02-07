@@ -1,0 +1,55 @@
+table 'Top N Products (By Sales Quantity)'
+	isHidden
+	lineageTag: 3dad5855-48d6-440f-bb93-420707c3fc94
+
+	column productId
+		isHidden
+		lineageTag: d82d082d-eb30-4191-815f-1fcb876ea772
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: sales_items[productId]
+
+		annotation SummarizationSetBy = Automatic
+
+	column productName
+		isHidden
+		lineageTag: 824230ef-5309-450e-b3ad-b0435c5c4426
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: sales_items[productName]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		isHidden
+		formatString: 0
+		lineageTag: 2f467d28-a2ba-4c9f-824c-4f174e1a7738
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quantity]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Top N Products (By Sales Quantity)' = calculated
+		mode: import
+		source = ```
+				
+				VAR chosen = SELECTEDVALUE('Top N'[Value])
+				
+				RETURN
+				TOPN(
+				    5,
+				    SUMMARIZE(
+				        sales_items,
+				        sales_items[productId],
+				        sales_items[productName],
+				        "Quantity", SUM(sales_items[quantity])
+				    ),
+				    [Quantity],
+				    DESC
+				)
+				
+				```
+
+	annotation PBI_Id = a1a2051909bf416d9c3c2821481e9ff1
+

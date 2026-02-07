@@ -1,0 +1,1138 @@
+table 'All Measures'
+	lineageTag: 7037c896-4ae6-4fe5-912b-cf6d122657e7
+
+	measure 'Total Customers Till Date' =
+			
+			COALESCE (
+			    CALCULATE (
+			        DISTINCTCOUNT ( customers[customerId] ),
+			        USERELATIONSHIP ( 'Calendar'[Date], customers[registrationDate] ),
+			        FILTER ( ALL ( 'Calendar' ), 'Calendar'[Date] <= MAX ( 'Calendar'[Date] ) )
+			    ),
+			    0
+			)
+		formatString: #,0
+		displayFolder: Customer Insights
+		lineageTag: 74437511-2ac6-48d5-8aa3-7a3f113af833
+
+	measure 'Total Revenue' =
+			
+			CALCULATE (
+			    SUMX ( sales, sales[totalAmount] ),
+			    USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Revenue Measures
+		lineageTag: 97e20897-993a-4e26-989b-80b2720ddecc
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'MTD Revenue' = ```
+			
+			-- VAR MaxDate = MAX('Calendar'[Date])
+			-- RETURN
+			COALESCE (
+			    CALCULATE ( [Total Revenue], 
+			    DATESMTD ( 'Calendar'[Date] ),
+			    USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			    ),0
+			)
+			```
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Revenue Measures
+		lineageTag: 5ca5e467-4603-4e32-b7d3-6770e4dd8048
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'YTD Revenue' =
+			
+			COALESCE (
+			    CALCULATE (
+			        [Total Revenue],
+			        DATESYTD ( 'Calendar'[Date] ),
+			        USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			    ),
+			    0
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Revenue Measures
+		lineageTag: 1616b274-687d-494c-ae5a-f773a7289faa
+
+	measure 'Prev Month Revenue (PREVIOUSMONTH)' =
+			
+			CALCULATE ( [Total Revenue], PREVIOUSMONTH ( 'Calendar'[Date] ) )
+		displayFolder: Revenue Measures
+		lineageTag: 7f833eab-92cc-4737-81cb-6017b11e5cac
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Previous Month Revenue' =
+			
+			CALCULATE ( [Total Revenue], DATEADD ( 'Calendar'[Date], -1, MONTH ) )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Revenue Measures
+		lineageTag: b7fee67e-6199-4296-8876-39bffe711991
+
+	measure 'Previous Month Revenue (From MTD)' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			VAR PreviousMonthEnd =
+			    EOMONTH ( MaxDate, -1 )
+			VAR PreviousMonthStart =
+			    DATE ( YEAR ( PreviousMonthEnd ), MONTH ( PreviousMonthEnd ), 1 )
+			RETURN
+			    CALCULATE (
+			        [Total Revenue],
+			        DATESBETWEEN ( 'Calendar'[Date], PreviousMonthStart, PreviousMonthEnd )
+			    )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Revenue Measures
+		lineageTag: f313c259-3317-443d-bc47-271d344818eb
+
+	measure 'Previous Month Title' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			VAR PrevMonthDate =
+			    EOMONTH ( MaxDate, -1 )
+			RETURN
+			    "Previous Month Revenue: " & FORMAT ( PrevMonthDate, "MMM yyyy" )
+		displayFolder: Titles
+		lineageTag: aedbae6a-809d-46a7-b0ee-d3d9e53521c4
+
+	measure 'Current Month Title' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			RETURN
+			    "Period (Till Date): " & FORMAT ( MaxDate, "MMM - yyyy" )
+		displayFolder: Titles
+		lineageTag: 7a933250-c072-457c-933f-13e65669b678
+
+	measure 'Total Cost' =
+			
+			COALESCE (
+			    CALCULATE (
+			        SUMX ( sales, sales[totalCost] ),
+			        USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			    ),
+			    0
+			)
+		displayFolder: Cost Measures
+		lineageTag: 18db8867-a17a-45d9-9bc0-d037a4ec40c5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gross Profit' =
+			
+			COALESCE (
+			    CALCULATE (
+			        SUMX ( sales, sales[profit] ),
+			        USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			    ),
+			    0
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Profit Measures
+		lineageTag: 2a8cf44d-ea37-4fda-949d-d8fed5755237
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	measure 'MoM % Revenue Change' =
+			
+			DIVIDE ( [Total Revenue] - [Previous Month Revenue], [Previous Month Revenue] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Revenue Measures
+		lineageTag: 2837d126-22ab-46b9-991e-5b635f69a98d
+
+	measure 'Previous Year Revenue' =
+			
+			CALCULATE ( [Total Revenue], DATEADD ( 'Calendar'[Date], -1, YEAR ) )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Revenue Measures
+		lineageTag: bc7bdbfb-19f6-43fc-bcb4-6203f40abaea
+
+	measure 'YoY % Revenue Change' =
+			
+			DIVIDE ( [Total Revenue] - [Previous Year Revenue], [Previous Year Revenue] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Revenue Measures
+		lineageTag: 3920825d-7679-4882-b6f0-ba37d2a354d4
+
+	measure 'Previous Month Profit' =
+			
+			CALCULATE ( [Gross Profit], DATEADD ( 'Calendar'[Date], -1, MONTH ) )
+		displayFolder: Profit Measures
+		lineageTag: bbaf945e-201c-4a55-9504-46b3496d455e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Previous Year Profit' =
+			
+			CALCULATE ( [Gross Profit], DATEADD ( 'Calendar'[Date], -1, YEAR ) )
+		displayFolder: Profit Measures
+		lineageTag: 147ff6ac-efbb-4be9-80e4-52afbe0a983c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'YoY % Profit Change' =
+			
+			DIVIDE ( [Gross Profit] - [Previous Year Profit], [Previous Year Profit] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Profit Measures
+		lineageTag: 00f7ecb7-5ca7-4dc9-a5db-29a674f577b8
+
+	measure 'YTD Profit' =
+			
+			COALESCE ( CALCULATE ( [Gross Profit], DATESYTD ( 'Calendar'[Date] ) ), 0 )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Profit Measures
+		lineageTag: 28cdf07b-37bf-49d2-aa23-e9926dc9db85
+
+	measure 'MTD Profit' =
+			
+			COALESCE ( CALCULATE ( [Gross Profit], DATESMTD ( 'Calendar'[Date] ) ), 0 )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Profit Measures
+		lineageTag: 990b8211-317e-4cd0-97c8-b5a48eaae1b1
+
+	measure 'MoM % Profit Change' =
+			
+			DIVIDE ( [Gross Profit] - [Previous Month Profit], [Previous Month Profit] )
+		displayFolder: Profit Measures
+		lineageTag: 6d4999c0-f377-40e1-ab23-cabcb82d1dd5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Gap From Last Month Revenue' =
+			
+			DIVIDE (
+			    [MTD Revenue] - [Previous Month Revenue (From MTD)],
+			    [Previous Month Revenue (From MTD)]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Revenue Measures
+		lineageTag: ddb99ce1-c057-4510-825e-e28bc1d7517f
+
+	measure 'YoY % Revenue Color' =
+			
+			SWITCH (
+			    TRUE (),
+			    [YoY % Revenue Change] > 0, "#08CB00",
+			    [YoY % Revenue Change] < 0, "#E43636",
+			    "#808080"
+			)
+		displayFolder: Colors
+		lineageTag: f31c682a-c7f3-4d91-ba17-9972f2dbf919
+
+	measure 'YoY % Profit Color' =
+			
+			SWITCH (
+			    TRUE (),
+			    [YoY % Profit Change] > 0, "#08CB00",
+			    [YoY % Profit Change] < 0, "#E43636",
+			    "#808080"
+			)
+		displayFolder: Colors
+		lineageTag: a989512d-9b77-4e0a-b922-0752a0b30c67
+
+	measure '% Gap Last Month Revenue Color' =
+			
+			SWITCH (
+			    TRUE (),
+			    [% Gap From Last Month Revenue] > 0, "#08CB00",
+			    [% Gap From Last Month Revenue] < 0, "#E43636",
+			    "#808080"
+			)
+		displayFolder: Colors
+		lineageTag: 0319a711-a07d-468d-b09e-39d9ffd92a2e
+
+	measure 'MTD Profit % Display' =
+			
+			VAR Change = [MoM % Profit Change (From MTD)]
+			VAR diff = [MTD Profit] - [Previous Month Profit (From MTD)]
+			RETURN
+			    IF (
+			        Change > 0,
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Month Title],
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Month Title]
+			    )
+		displayFolder: Arrows
+		lineageTag: 68ccbff4-d74e-4b3a-900d-c516d6aa3350
+
+	measure 'New Customers' =
+			
+			COALESCE (
+			    CALCULATE (
+			        DISTINCTCOUNT ( customers[customerId] ),
+			        USERELATIONSHIP ( 'Calendar'[Date], customers[registrationDate] ),
+			        DATESYTD ( 'Calendar'[Date] )
+			    ),
+			    0
+			)
+		formatString: #,0
+		displayFolder: Customer Insights
+		lineageTag: 69c4a58a-cdc7-4bca-a1d6-2ec946dae067
+
+	measure 'Registered Customers Title' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			RETURN
+			    FORMAT ( MaxDate, "MMM - yyyy" ) & "  Reg Cust (Till Date)"
+		displayFolder: Titles
+		lineageTag: 5867d86b-5d40-4a4e-a056-d9626ce7f31f
+
+	measure 'Previous Month Profit (From MTD)' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			VAR PreviousMonthEnd =
+			    EOMONTH ( MaxDate, -1 )
+			VAR PreviousMonthStart =
+			    DATE ( YEAR ( PreviousMonthEnd ), MONTH ( PreviousMonthEnd ), 1 )
+			RETURN
+			    CALCULATE (
+			        [Gross Profit],
+			        DATESBETWEEN ( 'Calendar'[Date], PreviousMonthStart, PreviousMonthEnd )
+			    )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Profit Measures
+		lineageTag: 6f0479df-3d77-4677-aac4-8327581359d4
+
+	measure 'MoM % Profit Change (From MTD)' =
+			
+			DIVIDE (
+			    [MTD Profit] - [Previous Month Profit (From MTD)],
+			    [Previous Month Profit (From MTD)]
+			)
+		displayFolder: Profit Measures
+		lineageTag: ca81e886-76d3-42cc-a410-ed9553e3d4e5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MoM % Profit Color (From MTD)' =
+			
+			SWITCH (
+			    TRUE (),
+			    [MoM % Profit Change (From MTD)] > 0, "#08CB00",
+			    [MoM % Profit Change (From MTD)] < 0, "#DE6A73",
+			    "#808080"
+			)
+		displayFolder: Colors
+		lineageTag: a11cbd56-ec7e-41f9-b34d-41202813299a
+
+	measure 'Month Title' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			VAR PrevMonthDate =
+			    EOMONTH ( MaxDate, -1 )
+			RETURN
+			    FORMAT ( PrevMonthDate, "MMM yyyy" )
+		displayFolder: Titles
+		lineageTag: 1a039c2d-4b68-4abd-8de0-a67e05f9132c
+
+	measure 'MTD Revenue % Display' =
+			
+			VAR Change = [% Gap From Last Month Revenue]
+			VAR diff = [MTD Revenue] - [Previous Month Revenue (From MTD)]
+			RETURN
+			    IF (
+			        Change > 0,
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Month Title],
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Month Title]
+			    )
+		displayFolder: Arrows
+		lineageTag: f5368ee0-225a-4e20-a9da-eaefa716840f
+
+	measure 'Units Sold' =
+			
+			COALESCE (
+			    CALCULATE (
+			        SUMX ( sales, sales[totalQuantity] ),
+			        USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] ),
+			        USERELATIONSHIP ( sales[orderId], sales_items[orderId] )
+			    ),
+			    0
+			)
+		formatString: #,0
+		displayFolder: Sales Measures
+		lineageTag: d0f846da-1231-413e-9101-caf8a13f4093
+
+	measure 'MTD Units Sold' =
+			
+			COALESCE ( CALCULATE ( [Units Sold], DATESMTD ( 'Calendar'[Date] ) ), 0 )
+		formatString: #,0
+		displayFolder: Sales Measures
+		lineageTag: 829d61ae-a1ab-4669-91a8-808c7d7fe35b
+
+	measure 'Previous Month Sales' =
+			
+			COALESCE (
+			    CALCULATE ( [Units Sold], DATEADD ( 'Calendar'[Date], -1, MONTH ) ),
+			    0
+			)
+		formatString: 0
+		displayFolder: Sales Measures
+		lineageTag: 3f65d61f-2e4f-4044-9154-0a59c1e2fcee
+
+	measure 'Previous Month Sales Quantity (From MTD)' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			VAR PreviousMonthEnd =
+			    EOMONTH ( MaxDate, -1 )
+			VAR PreviousMonthStart =
+			    DATE ( YEAR ( PreviousMonthEnd ), MONTH ( PreviousMonthEnd ), 1 )
+			RETURN
+			    CALCULATE (
+			        [Units Sold],
+			        DATESBETWEEN ( 'Calendar'[Date], PreviousMonthStart, PreviousMonthEnd )
+			    )
+		formatString: 0
+		displayFolder: Sales Measures
+		lineageTag: 55283385-e465-4711-9dcd-480676b9c7d2
+
+	measure 'MoM % Sales Quantity Change' =
+			
+			DIVIDE (
+			    [MTD Units Sold] - [Previous Month Sales Quantity (From MTD)],
+			    [Previous Month Sales Quantity (From MTD)],
+			    0
+			)
+		displayFolder: Sales Measures
+		lineageTag: 58f41da0-d720-4e8e-8df1-17ed781d7549
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'MTD Sales Quantity % Display' =
+			
+			VAR Change = [MoM % Sales Quantity Change]
+			VAR diff = [MTD Units Sold] - [Previous Month Sales Quantity (From MTD)]
+			RETURN
+			    IF (
+			        Change > 0,
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Month Title],
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Month Title]
+			    )
+		displayFolder: Arrows
+		lineageTag: 71619692-71ea-4b29-99e8-1deac8fc108c
+
+	measure 'Selected Period Title' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			RETURN
+			    "Selected Period: " & FORMAT ( MaxDate, "MMM - yyyy" )
+		displayFolder: Titles
+		lineageTag: c805fa39-53be-4d1b-9f3c-cdd6df3b33a4
+
+	measure 'Previous Year Revenue (From YTD)' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			VAR PreviousYearEnd =
+			    DATE ( YEAR ( MaxDate ) - 1, 12, 31 )
+			VAR PreviousYearStart =
+			    DATE ( YEAR ( MaxDate ) - 1, 1, 1 )
+			RETURN
+			    CALCULATE (
+			        [Total Revenue],
+			        DATESBETWEEN ( 'Calendar'[Date], PreviousYearStart, PreviousYearEnd )
+			    )
+		displayFolder: Revenue Measures
+		lineageTag: ff0f8a5a-0874-4b4f-bc47-34b6076ccca6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Gap From Last Year Revenue' =
+			
+			DIVIDE (
+			    [YTD Revenue] - [Previous Year Revenue (From YTD)],
+			    [Previous Year Revenue (From YTD)],
+			    0
+			)
+		displayFolder: Revenue Measures
+		lineageTag: 3b199e0b-6bcd-4278-aca2-80e40a2f533f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'YTD Revenue % Display' =
+			
+			VAR Change = [% Gap From Last Year Revenue]
+			VAR diff = [YTD Revenue] - [Previous Year Revenue (From YTD)]
+			RETURN
+			    IF (
+			        Change > 0,
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Prev Year Title],
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Prev Year Title]
+			    )
+		displayFolder: Arrows
+		lineageTag: 65a53db5-27cb-4219-a764-cac0b2d72feb
+
+	measure 'Prev Year Title' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			VAR PrevYear =
+			    YEAR ( MaxDate ) - 1
+			RETURN
+			    PrevYear
+		formatString: 0
+		displayFolder: Titles
+		lineageTag: f1fc0eb7-1017-48f8-9b95-9c75a1d1a6b5
+
+	measure '% Previous Year Revenue Color' =
+			
+			SWITCH (
+			    TRUE (),
+			    [% Gap From Last Year Revenue] > 0, "#08CB00",
+			    [% Gap From Last Year Revenue] < 0, "#E43636",
+			    "#808080"
+			)
+		displayFolder: Colors
+		lineageTag: 0b278ae6-cf46-4d6a-a95e-687814c38f55
+
+	measure 'MoM % Revenue Color (From MTD)' =
+			
+			SWITCH (
+			    TRUE (),
+			    [% Gap From Last Month Revenue] > 0, "#08CB00",
+			    [% Gap From Last Month Revenue] < 0, "#DE6A73",
+			    "#808080"
+			)
+		displayFolder: Colors
+		lineageTag: e75a4f11-5fec-49af-acfe-af27e0df3d58
+
+	measure 'MoM % Units Sold Color (From MTD)' =
+			
+			SWITCH (
+			    TRUE (),
+			    [MoM % Sales Quantity Change] > 0, "#08CB00",
+			    [MoM % Sales Quantity Change] < 0, "#DE6A73",
+			    "#808080"
+			)
+		displayFolder: Colors
+		lineageTag: 2d2b7232-7e85-44df-88c2-bbd4a8cfd0d1
+
+	measure 'Previous Year Profit (From YTD)' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			VAR PreviousYearEnd =
+			    DATE ( YEAR ( MaxDate ) - 1, 12, 31 )
+			VAR PreviousYearStart =
+			    DATE ( YEAR ( MaxDate ) - 1, 1, 1 )
+			RETURN
+			    CALCULATE (
+			        [Gross Profit],
+			        DATESBETWEEN ( 'Calendar'[Date], PreviousYearStart, PreviousYearEnd )
+			    )
+		displayFolder: Profit Measures
+		lineageTag: c0a24148-5357-4394-a087-be6e2d42b264
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Gap From Last Year Profit' =
+			
+			DIVIDE (
+			    [YTD Revenue] - [Previous Year Profit (From YTD)],
+			    [Previous Year Profit (From YTD)],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Profit Measures
+		lineageTag: 63dc85ff-8fdc-4c09-8621-0719054d7bef
+
+	measure 'YTD Profit % Display' =
+			
+			VAR Change = [% Gap From Last Year Profit]
+			VAR diff = [YTD Profit] - [Previous Year Profit (From YTD)]
+			RETURN
+			    IF (
+			        Change > 0,
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Prev Year Title],
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Prev Year Title]
+			    )
+		displayFolder: Arrows
+		lineageTag: 0a668c33-c518-4052-8db9-ef8126ef2f5d
+
+	measure '% Previous Year Profit Color' =
+			
+			SWITCH (
+			    TRUE (),
+			    [% Gap From Last Year Profit] > 0, "#08CB00",
+			    [% Gap From Last Year Profit] < 0, "#E43636",
+			    "#808080"
+			)
+		displayFolder: Colors
+		lineageTag: 9d7d0bc3-654b-4041-9879-8b7e5bf79c07
+
+	measure COGS =
+			
+			CALCULATE (
+			    SUMX ( sales, sales[totalCost] ),
+			    USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			)
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Cost Measures
+		lineageTag: f01ed1aa-09c0-48da-ae0f-a6a16d33d03c
+
+	measure 'YoY % Revenue Change Display' =
+			
+			VAR Change = [YoY % Revenue Change]
+			RETURN
+			    IF (
+			        Change > 0,
+			        FORMAT ( Change, "0.00%" ) & " ▲",
+			        FORMAT ( Change, "0.00%" ) & " ▼"
+			    )
+		displayFolder: Arrows
+		lineageTag: d9137940-2a53-4ed2-8540-7875a9c18533
+
+	measure 'Previous Year Sales' =
+			
+			COALESCE (
+			    CALCULATE ( [Units Sold], DATEADD ( 'Calendar'[Date], -1, YEAR ) ),
+			    0
+			)
+		formatString: 0
+		displayFolder: Sales Measures
+		lineageTag: d3b69ed1-b53b-4bce-b2f2-4536c96d3cd1
+
+	measure 'YoY % Units Sold Change' =
+			
+			DIVIDE ( [Units Sold] - [Previous Year Sales], [Previous Year Sales] )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Sales Measures
+		lineageTag: db6f340e-439c-43e9-8769-6d32b7da576c
+
+	measure 'YoY % Units Sold Change Display' =
+			
+			VAR Change = [YoY % Units Sold Change]
+			RETURN
+			    IF (
+			        Change > 0,
+			        FORMAT ( Change, "0.00%" ) & " ▲",
+			        FORMAT ( Change, "0.00%" ) & " ▼"
+			    )
+		displayFolder: Arrows
+		lineageTag: 7fae059c-23e4-4be9-84e2-bb6f8e365498
+
+	measure 'YTD Units Sold' =
+			
+			COALESCE ( CALCULATE ( [Units Sold], DATESYTD ( 'Calendar'[Date] ) ), 0 )
+		formatString: #,0
+		displayFolder: Sales Measures
+		lineageTag: 853ddadb-733f-4abb-ac7f-1596648aae1c
+
+	measure 'Total Orders' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( sales[orderId] ),
+			    USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			)
+		formatString: #,0
+		displayFolder: Sales Measures
+		lineageTag: 823f52ac-f640-4959-a60f-6f5fa773408a
+
+	measure 'Active Sales Team' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( salespeople[salespersonId] ),
+			    USERELATIONSHIP ( 'Calendar'[Date], salespeople[hireDate] ),
+			    FILTER ( ALL ( 'Calendar' ), 'Calendar'[Date] <= MAX ( salespeople[hireDate] ) ),
+			    FILTER ( salespeople, salespeople[employmentStatus] = "Active" )
+			)
+		formatString: 0
+		displayFolder: Sales Team Measures
+		lineageTag: 4bf25781-298b-43b3-b51d-e78cc605af8a
+
+	measure Managers =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( managers[managerId] ),
+			    CROSSFILTER ( 'Calendar'[Date], managers[hireDate], BOTH ),
+			    FILTER ( ALL ( 'Calendar' ), 'Calendar'[Date] <= MAX ( 'Calendar'[Date] ) )
+			)
+		formatString: 0
+		displayFolder: Managers Measures
+		lineageTag: 220e61d0-8fe6-4216-941f-0704d49cfd17
+
+	measure 'Achievement %' =
+			
+			CALCULATE (
+			    DIVIDE ( [Total Revenue], SUM ( salespeople[salesTarget] ), 0 ),
+			    FILTER ( salespeople, salespeople[employmentStatus] = "Active" )
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Sales Team Measures
+		lineageTag: 2e6fd451-55d6-484b-b946-48aab8dce35f
+
+	measure 'Inactive Sales Team' =
+			
+			CALCULATE (
+			    DISTINCTCOUNT ( salespeople[salespersonId] ),
+			    USERELATIONSHIP ( 'Calendar'[Date], salespeople[hireDate] ),
+			    FILTER ( ALL ( 'Calendar' ), 'Calendar'[Date] <= MAX ( salespeople[hireDate] ) ),
+			    FILTER ( salespeople, salespeople[employmentStatus] = "Inactive" )
+			)
+		formatString: 0
+		displayFolder: Sales Team Measures
+		lineageTag: a3e577e6-4d4a-4815-bd04-263733ad75e4
+
+	measure 'Adjusted Gross Profit' =
+			
+			[Gross Profit] * ( 1 + 'Percentage Adjustment'[Percentage Adjustment Value] )
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Adjusted % Numbers
+		lineageTag: 64ad1ea8-6681-423c-a386-21334653e20a
+
+	measure 'Adjusted Revenue' =
+			
+			SUM ( sales_items[Total Revenue (lineTotal & taxAmount)] ) * ( 1 + 'Percentage Adjustment'[Percentage Adjustment Value] )
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Adjusted % Numbers
+		lineageTag: 1d4b69b9-6054-4a4d-915f-4ae63747bbe8
+
+	measure 'Average Order Value' =
+			
+			CALCULATE(
+			    DIVIDE([Total Revenue],COUNTROWS(sales)),
+			    USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			)
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Sales Measures
+		lineageTag: 03014f07-f3b8-40fe-9d0c-e819d55f3a26
+
+	measure 'Top Performing Region | Country Title' =
+			
+			VAR Region =
+			    SELECTEDVALUE ( salespeople[region] )
+			VAR Country =
+			    SELECTEDVALUE ( salespeople[country] )
+			RETURN
+			    "Top 20 Best Performing Salesmen In "
+			        & COALESCE ( Country, Region, "All Regions" )
+		displayFolder: Dynamic Titles
+		lineageTag: 7db2778b-402b-4a58-8874-2363f69e415f
+
+	measure 'Salesman Name Title' =
+			
+			VAR salesmanname =
+			    SELECTEDVALUE ( salespeople[fullName] )
+			RETURN
+			    COALESCE ( salesmanname, "All Salesmen's" ) & " Achievement Against Target"
+		displayFolder: Dynamic Titles
+		lineageTag: f8bdd71c-b5a0-4289-b407-ba1ceda0db3c
+
+	measure 'YoY % Profit Change Display' =
+			
+			VAR Change = [YoY % Profit Change]
+			RETURN
+			    IF (
+			        Change > 0,
+			        FORMAT ( Change, "0.00%" ) & " ▲",
+			        FORMAT ( Change, "0.00%" ) & " ▼"
+			    )
+		displayFolder: Arrows
+		lineageTag: 4371bf22-9572-4ce7-97c2-07ad094ed7f4
+
+	measure 'YoY % Units Sold Color' =
+			
+			SWITCH (
+			    TRUE (),
+			    [YoY % Units Sold Change] > 0, "#08CB00",
+			    [YoY % Units Sold Change] < 0, "#E43636",
+			    "#808080"
+			)
+		displayFolder: Colors
+		lineageTag: 16791332-0564-4ffa-9744-d2559083a44c
+
+	measure '% Gap From Last Year Units Sold' =
+			
+			DIVIDE (
+			    [YTD Units Sold] - [Previous Year Units Sold (From YTD)],
+			    [Previous Year Units Sold (From YTD)],
+			    0
+			)
+		displayFolder: Sales Measures
+		lineageTag: b8fbcfad-6a37-4234-802a-97265a48643a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Previous Year Units Sold (From YTD)' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			VAR PreviousYearEnd =
+			    DATE ( YEAR ( MaxDate ) - 1, 12, 31 )
+			VAR PreviousYearStart =
+			    DATE ( YEAR ( MaxDate ) - 1, 1, 1 )
+			RETURN
+			    CALCULATE (
+			        [Units Sold],
+			        DATESBETWEEN ( 'Calendar'[Date], PreviousYearStart, PreviousYearEnd )
+			    )
+		formatString: 0
+		displayFolder: Sales Measures
+		lineageTag: 43275a90-9438-4ada-8bbb-7d72e3a912ad
+
+	measure 'YTD Units Sold % Display' =
+			
+			VAR Change = [% Gap From Last Year Units Sold]
+			VAR diff = [YTD Units Sold] - [Previous Year Units Sold (From YTD)]
+			RETURN
+			    IF (
+			        Change > 0,
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Prev Year Title],
+			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Prev Year Title]
+			    )
+		displayFolder: Arrows
+		lineageTag: f76b27f5-7231-4e0e-afcd-679c383285ce
+
+	measure 'Increase / Decrease (YoY)' =
+			
+			VAR v = [YoY % Revenue Change]
+			RETURN
+			    IF (
+			        v > 0,
+			        "YoY Increase from the previous year " & [Prev Year Title] & ".",
+			        "YoY Decrease from the previous year " & [Prev Year Title] & "."
+			    )
+		displayFolder: Increase / Decrease
+		lineageTag: 5bbd8beb-38f7-4943-9036-9aa9b54f687d
+
+	measure 'Current Year Title' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			VAR CurrYear =
+			    YEAR ( MaxDate )
+			RETURN
+			    CurrYear
+		formatString: 0
+		displayFolder: Titles
+		lineageTag: 035d2b42-d749-49ea-9e69-2fbbb78d97d4
+
+	measure 'Average Revenue' =
+			
+			CALCULATE (
+			    AVERAGEX ( sales, sales[totalAmount] ),
+			    USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			)
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Revenue Measures
+		lineageTag: dccc947d-fdca-445b-8dfb-393b9a1db6ee
+
+	measure 'Previous Year Monthly Revenue (From YTD)' =
+			
+			VAR MaxDate =
+			    MAX ( 'Calendar'[Date] )
+			VAR PreviousYearEnd =
+			    DATE ( YEAR ( MaxDate ) - 1, 12, 31 )
+			VAR PreviousYearStart =
+			    DATE ( YEAR ( MaxDate ) - 1, 1, 1 )
+			VAR PrevYearMonthlyRev =
+			    CALCULATE (
+			        [Total Revenue],
+			        DATESBETWEEN ( 'Calendar'[Date], PreviousYearStart, PreviousYearEnd )
+			    )
+			RETURN
+			    DIVIDE ( PrevYearMonthlyRev, 12, 0 )
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
+		displayFolder: Revenue Measures
+		lineageTag: 16221b09-e7e0-4f94-8ceb-dfe950504d3c
+
+	measure 'Revenue Forecast' =
+			
+			1.01 * [Previous Year Monthly Revenue (From YTD)]
+		displayFolder: Forecasts
+		lineageTag: c4f5bc8a-1ada-4cce-8e13-d6426f03dc0b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue Forecast Total' =
+			
+			[Revenue Forecast] * 12
+		displayFolder: Forecasts
+		lineageTag: 98096f18-a755-4f38-867e-c96a89817574
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue Forecast % Change' =
+			
+			DIVIDE (
+			    [Revenue Forecast Total] - [Previous Year Revenue (From YTD)],
+			    [Previous Year Revenue (From YTD)]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Forecasts
+		lineageTag: f30e8503-aa59-43bd-9402-6ec47869e759
+
+	measure 'Region | Country Title' =
+			
+			VAR Region =
+			    SELECTEDVALUE ( salespeople[region] )
+			VAR Country =
+			    SELECTEDVALUE ( salespeople[country] )
+			RETURN
+			    COALESCE ( Country, Region, "All Regions" )
+		displayFolder: Dynamic Titles
+		lineageTag: 2e607d2b-d516-472d-98a0-b4a1ef445fa4
+
+	measure 'Revenue Goal (Monthly)' =
+			
+			VAR GoalValue =
+			    SELECTEDVALUE ( 'Revenue Goal'[Revenue Goal], 0 )
+			RETURN
+			    DIVIDE ( GoalValue, 12 )
+		formatString: \$#,0;(\$#,0);\$#,0
+		displayFolder: Goal Measures
+		lineageTag: 8870f6cb-b060-4e93-87d3-78f4910a7624
+
+	measure 'Revenue Goal (%)' =
+			
+			DIVIDE (
+			    [Revenue Goal (Monthly)] - [Previous Year Monthly Revenue (From YTD)],
+			    [Previous Year Monthly Revenue (From YTD)],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Goal Measures
+		lineageTag: 7ab0b43b-ccf1-4228-952e-1d684cfd457b
+
+	measure 'Revenue Goal' =
+			
+			SELECTEDVALUE ( 'Revenue Goal'[Revenue Goal], 0 )
+		formatString: 0
+		displayFolder: Goal Measures
+		lineageTag: 1ecfac4e-69af-43b0-bedb-cfcf4598c1f4
+
+	measure 'Increase / Decrease (Revenue Goal)' =
+			
+			VAR v = [Revenue Goal (%)] RETURN IF ( v > 0, "increase", "decrease" )
+		displayFolder: Increase / Decrease
+		lineageTag: 1e31455a-fda4-42b1-af68-bf1f99774805
+
+	measure 'Dynamic Line Value' =
+			
+			VAR SelectedMeasure =
+			    SELECTEDVALUE ( 'Measure Selection'[Measure Name], "Revenue Generated" ) // Default to Revenue if nothing selected
+			RETURN
+			    SWITCH (
+			        SelectedMeasure,
+			        "Revenue Generated", [Total Revenue],
+			        "Units Sold", [Units Sold],
+			        "Profit", [Gross Profit],
+			        BLANK ()
+			    )
+		displayFolder: Dynamic Line Value
+		lineageTag: bfc01906-625d-4f84-b8e3-ff849feb97f0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Units|Revenue|Profit Region | Country Title' = ```
+			
+			VAR Region = SELECTEDVALUE ( salespeople[region] )
+			VAR Country = SELECTEDVALUE ( salespeople[country] )
+			VAR salesmanname = SELECTEDVALUE ( salespeople[fullName] )
+			VAR SelectedMetric =
+			    SELECTEDVALUE (
+			        'Dynamic Rev, Unit, Prof, Line'[Dynamic Rev, Unit, Prof, Line Fields],
+			        "Multiple Metrics"
+			    )
+			
+			VAR CleanMetric = 
+			    SUBSTITUTE( SUBSTITUTE(SelectedMetric, "'All Measures'[", ""), "]", "" )
+			RETURN
+			IF(
+			    ISBLANK(Region & Country),
+			    "MTD " & CleanMetric,
+			
+			    "MTD " & CleanMetric & " In " & COALESCE ( Country, Region, "All Regions" ) & " By "
+			        & COALESCE ( salesmanname, "All Sales Persons" )
+			)
+			```
+		displayFolder: Dynamic Titles
+		lineageTag: a23c5c0f-1632-44a7-a437-5b4c1115e402
+
+	measure 'Last Purchase Date' = ```
+			
+			VAR PurchaseDate = 
+			CALCULATE(
+			    MAX(sales[orderDate]),
+			    USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] ),
+			    REMOVEFILTERS('Calendar'[Year], 'Calendar'[Month Name], 'Calendar'[Month], 'Calendar'[Start Of Month])
+			)
+			
+			RETURN
+			FORMAT(PurchaseDate, "mmm - yyyy")
+			```
+		displayFolder: Customer Insights
+		lineageTag: ab9d2397-aa8d-4906-84bb-4334e886a44b
+
+	measure 'Purchase Recency' = ```
+			
+			    DATEDIFF([Last Purchase Date], MAX('Calendar'[Date]), DAY)
+			```
+		formatString: 0
+		displayFolder: Customer Insights
+		lineageTag: 41acaf7e-c694-4524-9289-3adefdf3f106
+
+	measure 'Purchase Frequency' =
+			
+			DIVIDE(
+			    COUNTROWS(sales),
+			    DISTINCTCOUNT(sales[customerId]),
+			    0
+			)
+		formatString: 0
+		displayFolder: Customer Insights
+		lineageTag: 28b77ecf-d62d-4ef6-92da-871469024669
+
+	measure 'Churned Customers' = ```
+			
+			VAR churnperioddays = SELECTEDVALUE('Churn Period'[Value])
+			VAR MaxDate = MAX('Calendar'[Date])
+			VAR churnthresholddate = MaxDate - churnperioddays
+			
+			VAR result =
+			COALESCE(
+			    COUNTROWS(
+			    FILTER(
+			        VALUES(customers[customerId]),
+			        VAR LastPurchaseDate = 
+			            CALCULATE(
+			                MAX(sales[orderDate]),
+			                REMOVEFILTERS('Calendar')
+			            )
+			        VAR CustomerRegistered = 
+			            CALCULATE(
+			                VALUES(customers[registrationDate]),
+			                REMOVEFILTERS('Calendar')
+			            )
+			        RETURN
+			            LastPurchaseDate < ChurnThresholdDate &&
+			            CustomerRegistered <= ChurnThresholdDate
+			        )
+			    ), 0
+			)
+			
+			RETURN
+			result
+			
+			```
+		formatString: #,0
+		displayFolder: Customer Insights
+		lineageTag: eeb59580-9a7f-4ee8-bb96-ed4fb3189337
+
+	measure 'Churned Rate' =
+			
+			DIVIDE([Churned Customers], [Total Customers Till Date], 0)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Customer Insights
+		lineageTag: 418c574a-5b7e-4c56-a9ff-86950bb05dd8
+
+	measure 'Repeat Purchases' =
+			
+			VAR MaxDateInContext = MAX('Calendar'[Date])
+			RETURN
+			COALESCE(
+			    COUNTROWS(
+			        FILTER(
+			            VALUES(customers[customerId]),
+			            CALCULATE(
+			                COUNTROWS(sales),
+			                REMOVEFILTERS('Calendar'),
+			                sales[orderdate] <= MaxDateInContext
+			            ) > 1
+			        )
+			    ), 0
+			)
+		formatString: #,0
+		displayFolder: Customer Insights
+		lineageTag: dee33b94-ce42-42ea-a5d5-de45ae2b6329
+
+	measure 'Selected Periods Titles' =
+			
+			VAR MaxDate = MAX('Calendar'[Date])
+			VAR Years =
+			    SELECTEDVALUE ( 'Calendar'[Year] )
+			VAR Months =
+			    SELECTEDVALUE ( 'Calendar'[Month Name] )
+			RETURN
+			IF (
+			    ISBLANK( Months & Years ),
+			    "Current Period: " & FORMAT( MaxDate, "mmm yyyy" ),
+			    "Selected Period: " & COALESCE ( Months & " " & Years, Years )
+			)
+		displayFolder: Titles
+		lineageTag: 78fb1b3f-2347-4c04-9f1e-c5f724839893
+
+		annotation PBI_FormatHint = {"isText":true}
+
+	measure '% Revenue Share' =
+			
+			DIVIDE( [Total Revenue], CALCULATE( [Total Revenue], ALL() ) )
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Revenue Measures
+		lineageTag: 36bae623-42ab-4aac-aac8-052d658869d2
+
+	measure 'Last Refresh PQ' = ```
+			
+			"Last Refresh: " &
+			FORMAT( MAX('Refresh Timestamp'[Refresh Timestamp]), "dd MMM yyyy hh:mm AM/PM")
+			
+			```
+		displayFolder: Last Refresh
+		lineageTag: de08dfd9-cb23-42b9-8850-f0077657b7c3
+
+	measure '% Previous Year Units Sold Color' =
+			
+			SWITCH (
+			    TRUE (),
+			    [% Gap From Last Year Units Sold] > 0, "#08CB00",
+			    [% Gap From Last Year Units Sold] < 0, "#E43636",
+			    "#808080"
+			)
+		displayFolder: Colors
+		lineageTag: 5e9e3dc1-e90b-40e6-a50d-08365d1d799d
+
+	measure 'Dynamic Tooltip Title' =
+			
+			SWITCH(
+			    TRUE(),
+			
+			    ISINSCOPE(sales[salesRegion]),
+			        SELECTEDVALUE('Calendar'[Month Name]),
+			
+			    ISINSCOPE('Calendar'[Month]),
+			        FORMAT(SELECTEDVALUE('Calendar'[Month]), "MMMM YYYY"),
+			
+			    ISINSCOPE(sales[source]),
+			        SELECTEDVALUE(sales[source]),
+			
+			    ISINSCOPE(sales[channel]),
+			        SELECTEDVALUE(sales[channel]),
+			
+			    "Details"
+			)
+		lineageTag: c4101f83-f7fc-40c7-bcc2-f912520eaa5e
+
+	partition 'All Measures' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

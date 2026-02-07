@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Big_Data_Inventory_Sales"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "bb5f3c4b-5447-4f19-8cd5-8f551da19e57"
+  }
+}

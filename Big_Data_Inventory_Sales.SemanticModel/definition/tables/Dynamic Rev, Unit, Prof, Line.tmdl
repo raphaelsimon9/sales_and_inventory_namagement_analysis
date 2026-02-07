@@ -1,0 +1,49 @@
+table 'Dynamic Rev, Unit, Prof, Line'
+	lineageTag: 7a65a05c-6ede-41c4-a95f-9ac62514c836
+
+	column 'Dynamic Rev, Unit, Prof, Line'
+		lineageTag: a5872307-ef5e-43ec-bab3-b95afe182beb
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Dynamic Rev, Unit, Prof, Line Order'
+
+		relatedColumnDetails
+			groupByColumn: 'Dynamic Rev, Unit, Prof, Line Fields'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dynamic Rev, Unit, Prof, Line Fields'
+		isHidden
+		lineageTag: d440e44b-171e-42dd-a703-20c37342e71e
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Dynamic Rev, Unit, Prof, Line Order'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Dynamic Rev, Unit, Prof, Line Order'
+		isHidden
+		formatString: 0
+		lineageTag: e983595e-bfd1-4066-9df7-123932c586c1
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Dynamic Rev, Unit, Prof, Line' = calculated
+		mode: import
+		source =
+				{
+				    ("Units Sold", NAMEOF('All Measures'[Units Sold]), 0),
+				    ("Total Revenue", NAMEOF('All Measures'[Total Revenue]), 1),
+				    ("Gross Profit", NAMEOF('All Measures'[Gross Profit]), 2)
+				}
+
+	annotation PBI_Id = a00cfd54dd4847928451ff6216bbe5c8
+

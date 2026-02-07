@@ -1,0 +1,27 @@
+table 'Percentage Adjustment'
+	lineageTag: d262f5f0-b4cb-4f4a-aae9-10b2fcee1705
+
+	measure 'Percentage Adjustment Value' =
+			
+			SELECTEDVALUE ( 'Percentage Adjustment'[Percentage Adjustment %], 0 )
+		lineageTag: 7ba76e9f-0910-43fa-a62e-76bbbfd634d1
+
+	column 'Percentage Adjustment %'
+		formatString: 0%;-0%;0%
+		lineageTag: 1574f6ee-7f1d-480b-8067-00349697eeec
+		summarizeBy: none
+		sourceColumn: [Value]
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 0
+				}
+
+		annotation SummarizationSetBy = User
+
+	partition 'Percentage Adjustment' = calculated
+		mode: import
+		source = GENERATESERIES(-1, 1, 0.05)
+
+	annotation PBI_Id = c6b66083a5b24e81b0776d1f013f5825
+

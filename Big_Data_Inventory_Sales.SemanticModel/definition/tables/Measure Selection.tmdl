@@ -1,0 +1,35 @@
+table 'Measure Selection'
+	lineageTag: fbfb3f82-5b31-4dde-bab4-e7f533bc077c
+
+	column 'Measure Name'
+		lineageTag: 6f0ed554-00f4-4927-a599-3f2361662c07
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Measure Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Measure Order'
+		formatString: 0
+		lineageTag: 98eb3af0-7b22-4b86-a519-d168b91ff82e
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Measure Order]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Measure Selection' = calculated
+		mode: import
+		source =
+				DATATABLE(
+				    "Measure Name", STRING,
+				    "Measure Order", INTEGER,
+				    {
+				        {"Revenue Generated", 1},
+				        {"Units Sold", 2},
+				        {"Profit", 3}
+				    }
+				)
+
+	annotation PBI_Id = 171733c369c646a5a1cbb20d2343e964
+
