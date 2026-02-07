@@ -5,3 +5,6 @@
 *.pbit
 .pbi/
 *.lock
+*.pptx
+*.svg
+.Icons/
