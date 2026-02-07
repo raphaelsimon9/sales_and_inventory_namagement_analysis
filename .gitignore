@@ -1,2 +1,7 @@
 **/.pbi/localSettings.json
 **/.pbi/cache.abf
+# Power BI
+*.pbix
+*.pbit
+.pbi/
+*.lock
