@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "4bf0e27aabccb0d51459",
+  "position": {
+    "x": 182,
+    "y": 174,
+    "z": 8000,
+    "height": 525,
+    "width": 880,
+    "tabOrder": 9000
+  },
+  "visualGroup": {
+    "displayName": "Units Sold Report Group",
+    "groupMode": "ScaleMode"
+  },
+  "isHidden": true
+}

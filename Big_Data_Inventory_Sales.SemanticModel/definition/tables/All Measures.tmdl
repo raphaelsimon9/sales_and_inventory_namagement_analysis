@@ -220,7 +220,7 @@ table 'All Measures'
 			SWITCH (
 			    TRUE (),
 			    [YoY % Revenue Change] > 0, "#08CB00",
-			    [YoY % Revenue Change] < 0, "#E43636",
+			    [YoY % Revenue Change] < 0, "#E7BA61",
 			    "#808080"
 			)
 		displayFolder: Colors
@@ -231,7 +231,7 @@ table 'All Measures'
 			SWITCH (
 			    TRUE (),
 			    [YoY % Profit Change] > 0, "#08CB00",
-			    [YoY % Profit Change] < 0, "#E43636",
+			    [YoY % Profit Change] < 0, "#E7BA61",
 			    "#808080"
 			)
 		displayFolder: Colors
@@ -261,7 +261,7 @@ table 'All Measures'
 		displayFolder: Arrows
 		lineageTag: 68ccbff4-d74e-4b3a-900d-c516d6aa3350
 
-	measure 'New Customers' =
+	measure 'YTD New Customers' =
 			
 			COALESCE (
 			    CALCULATE (
@@ -745,7 +745,7 @@ table 'All Measures'
 			SWITCH (
 			    TRUE (),
 			    [YoY % Units Sold Change] > 0, "#08CB00",
-			    [YoY % Units Sold Change] < 0, "#E43636",
+			    [YoY % Units Sold Change] < 0, "#E7BA61",
 			    "#808080"
 			)
 		displayFolder: Colors
@@ -1150,6 +1150,17 @@ table 'All Measures'
 		formatString: 0
 		displayFolder: Customer Insights
 		lineageTag: e92a37ec-c50a-4f5e-b992-7aa92bcdbfcd
+
+	measure 'MTD New Customers' = ```
+			
+			    CALCULATE(
+			        DISTINCTCOUNT(customers[customerId]),
+			        DATESMTD(customers[registrationDate])
+			    )
+			```
+		formatString: 0
+		displayFolder: Customer Insights
+		lineageTag: 841fd24c-f6b6-40cd-bc13-1104e4e16cbf
 
 	partition 'All Measures' = m
 		mode: import

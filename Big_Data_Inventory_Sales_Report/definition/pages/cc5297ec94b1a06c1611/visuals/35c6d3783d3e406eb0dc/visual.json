@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "35c6d3783d3e406eb0dc",
+  "position": {
+    "x": 532.62108621568427,
+    "y": 207.55518569091615,
+    "z": 18000,
+    "height": 116.56503794434829,
+    "width": 225,
+    "tabOrder": 24000
+  },
+  "visualGroup": {
+    "displayName": "YTD Profit Group",
+    "groupMode": "ScaleMode"
+  }
+}

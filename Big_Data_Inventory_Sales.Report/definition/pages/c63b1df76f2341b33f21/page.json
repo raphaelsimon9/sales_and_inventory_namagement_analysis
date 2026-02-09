@@ -118,7 +118,7 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'Other Reports.svg'"
+                    "Value": "'Other_Reports028736204014088496.svg'"
                   }
                 }
               },
@@ -127,7 +127,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "Other_Reports028736204014088496.svg"
+                    "ItemName": "Other_Reports028736204014088497406640324954556.svg"
                   }
                 }
               },

@@ -1,0 +1,499 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 1580,
+    "z": 3000,
+    "height": 260,
+    "width": 324,
+    "tabOrder": 3000
+  },
+  "objects": {
+    "general": [
+      {
+        "properties": {
+          "paragraphs": [
+            {
+              "textRuns": [
+                {
+                  "value": "The overall total revenue generated from ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "starting year"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " till ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " in ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 11"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " is ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "total revenue"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": ". ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                }
+              ]
+            },
+            {
+              "textRuns": [
+                {
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "textRuns": [
+                {
+                  "value": "We had a ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 2"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": "    ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 3"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": "  ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                }
+              ]
+            },
+            {
+              "textRuns": [
+                {
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "textRuns": [
+                {
+                  "value": "Our ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "current year title"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " YTD Revenue is currently at ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "YTD Revenue"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " which is ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 4"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " away from the total revenue generated in ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 5"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " (",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 10"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": ") with a MoM of ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 8"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": ".",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                }
+              ]
+            },
+            {
+              "textRuns": [
+                {
+                  "value": ""
+                }
+              ]
+            },
+            {
+              "textRuns": [
+                {
+                  "value": "To achieve our projected ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 12"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " revenue goal of ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Revenue Goal"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " by EoY, we need to ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 13"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " our revenue generation by ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Value 14"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " which is ",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": {
+                    "propertyIdentifier": {
+                      "objectName": "values",
+                      "propertyName": "expr"
+                    },
+                    "selector": {
+                      "id": "Revenue Goal Monthly"
+                    }
+                  },
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                },
+                {
+                  "value": " MoM.",
+                  "textStyle": {
+                    "fontWeight": "bold",
+                    "fontSize": "9pt",
+                    "color": "#1f4761"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "values": []
+  }
+}

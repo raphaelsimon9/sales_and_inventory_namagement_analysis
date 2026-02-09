@@ -94,7 +94,7 @@
                       "Entity": "All Measures"
                     }
                   },
-                  "Property": "New Customers"
+                  "Property": "YTD New Customers"
                 }
               },
               "queryRef": "All Measures.New Customers",

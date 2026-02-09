@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "eae512d44466f929b79b",
+  "position": {
+    "x": 169.32605511915858,
+    "y": 114.1110371455199,
+    "z": 3000,
+    "height": 57.669018772467048,
+    "width": 638.0402076953801,
+    "tabOrder": 10000
+  },
+  "visualGroup": {
+    "displayName": "Sales Person Overview",
+    "groupMode": "ScaleMode"
+  }
+}

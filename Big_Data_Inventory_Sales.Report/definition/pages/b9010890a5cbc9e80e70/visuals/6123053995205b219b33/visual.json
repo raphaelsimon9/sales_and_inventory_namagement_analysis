@@ -3,10 +3,10 @@
   "name": "6123053995205b219b33",
   "position": {
     "x": 158.68932118525814,
-    "y": 119.68940326684725,
+    "y": 115,
     "z": 0,
-    "height": 278.37872445210542,
-    "width": 146.5858983829927,
+    "height": 282,
+    "width": 154.65484691783632,
     "tabOrder": 0
   },
   "visual": {
@@ -51,12 +51,11 @@
                       "Entity": "All Measures"
                     }
                   },
-                  "Property": "Customers Bought This Month"
+                  "Property": "Churned Rate"
                 }
               },
-              "queryRef": "All Measures.Customers Bought This Month",
-              "nativeQueryRef": "Custs Bought This Month",
-              "displayName": "Custs Bought This Month"
+              "queryRef": "All Measures.Churned Rate",
+              "nativeQueryRef": "Churned Rate"
             },
             {
               "field": {
@@ -66,11 +65,26 @@
                       "Entity": "All Measures"
                     }
                   },
-                  "Property": "Churned Rate"
+                  "Property": "MTD New Customers"
                 }
               },
-              "queryRef": "All Measures.Churned Rate",
-              "nativeQueryRef": "Churned Rate"
+              "queryRef": "All Measures.MTD New Customers",
+              "nativeQueryRef": "MTD New Customers"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measures"
+                    }
+                  },
+                  "Property": "Customers Bought This Month"
+                }
+              },
+              "queryRef": "All Measures.Customers Bought This Month",
+              "nativeQueryRef": "Custs Bought This Month",
+              "displayName": "Custs Bought This Month"
             },
             {
               "field": {
@@ -133,7 +147,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
+                  "Value": "13D"
                 }
               }
             },
@@ -186,6 +200,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "664cf03f66bf363bfe39",
+  "position": {
+    "x": 0,
+    "y": 225.33012896023843,
+    "z": 3000,
+    "height": 52.056926867606364,
+    "width": 135,
+    "tabOrder": 3000
+  },
+  "visualGroup": {
+    "displayName": "Salesman Slicer Group",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "6c729ff39bc0173ad43f"
+}

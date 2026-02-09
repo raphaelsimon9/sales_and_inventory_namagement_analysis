@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "4a826b856b9138d0676e",
+  "position": {
+    "x": 197.87711439821908,
+    "y": 326.93729157179052,
+    "z": 5000,
+    "height": 99.3870323525496,
+    "width": 225.76807349221141,
+    "tabOrder": 25000
+  },
+  "visualGroup": {
+    "displayName": "MTD Revenue Group",
+    "groupMode": "ScaleMode"
+  }
+}

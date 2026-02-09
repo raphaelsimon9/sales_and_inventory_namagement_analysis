@@ -1,0 +1,17 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "2cdfce617017e5a7eee6",
+  "position": {
+    "x": 0,
+    "y": 102,
+    "z": 0,
+    "height": 59.48201224629549,
+    "width": 136.85987714600955,
+    "tabOrder": 2000
+  },
+  "visualGroup": {
+    "displayName": "Region Slicer Group",
+    "groupMode": "ScaleMode"
+  },
+  "parentGroupName": "63b1794e60fa912866de"
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "a5d548fd87c945b2580e",
+  "position": {
+    "x": 170,
+    "y": 124,
+    "z": 0,
+    "height": 63.804020769538013,
+    "width": 491.36409038144859,
+    "tabOrder": 0
+  },
+  "visualGroup": {
+    "displayName": "Multi-Row Card Group",
+    "groupMode": "ScaleMode"
+  }
+}

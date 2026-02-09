@@ -18381,7 +18381,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "All Measures",
-			          "ConceptualProperty": "New Customers"
+			          "ConceptualProperty": "YTD New Customers"
 			        }
 			      },
 			      "State": "Generated",
