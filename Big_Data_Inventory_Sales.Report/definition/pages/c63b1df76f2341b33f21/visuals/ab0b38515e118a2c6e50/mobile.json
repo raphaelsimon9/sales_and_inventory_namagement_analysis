@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainerMobileState/2.1.0/schema.json",
+  "position": {
+    "x": 0,
+    "y": 420,
+    "z": 8000,
+    "height": 60,
+    "width": 324,
+    "tabOrder": 5000
+  },
+  "visualContainerObjects": {
+    "title": [
+      {
+        "properties": {
+          "fontColor": {
+            "solid": {
+              "color": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'#144E75'"
+                  }
+                }
+              }
+            }
+          },
+          "alignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'center'"
+              }
+            }
+          },
+          "text": {
+            "expr": {
+              "Literal": {
+                "Value": "'Enter A Salesman Below Name To Filter SalesPerson-Wise'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "background": [],
+    "spacing": []
+  }
+}

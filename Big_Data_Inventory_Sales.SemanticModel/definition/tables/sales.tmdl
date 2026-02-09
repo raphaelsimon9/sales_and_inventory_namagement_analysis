@@ -452,16 +452,6 @@ table sales
 
 		annotation UnderlyingDateTimeDataType = Date
 
-	column trackingNumber
-		dataType: string
-		isNullable: false
-		sourceProviderType: nvarchar(50)
-		lineageTag: 6fddecb9-8191-404a-8e9d-314ed6060b95
-		summarizeBy: none
-		sourceColumn: trackingNumber
-
-		annotation SummarizationSetBy = Automatic
-
 	column carrier
 		dataType: string
 		isNullable: false
@@ -501,15 +491,51 @@ table sales
 
 		annotation SummarizationSetBy = Automatic
 
+	column shippingAddress
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 50709a44-978d-40b2-9d8d-0436782e71a5
+		summarizeBy: none
+		sourceColumn: shippingAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column billingAddress
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 43e3795d-fa3b-49fe-918e-65c16a73739d
+		summarizeBy: none
+		sourceColumn: billingAddress
+
+		annotation SummarizationSetBy = Automatic
+
+	column returnRequested
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		sourceProviderType: bit
+		lineageTag: 56330153-353e-456c-8008-b360cfc0ff38
+		summarizeBy: none
+		sourceColumn: returnRequested
+
+		annotation SummarizationSetBy = Automatic
+
+	column trackingNumber
+		dataType: string
+		sourceProviderType: nvarchar(50)
+		lineageTag: 3ffc8d91-91bf-4582-a8a2-1a449e1651fb
+		summarizeBy: none
+		sourceColumn: trackingNumber
+
+		annotation SummarizationSetBy = Automatic
+
 	partition sales = m
 		mode: dual
 		source =
 				let
 				    Source = Sql.Database("RAFAEL", "inventory_sales_report"),
-				    dbo_sales = Source{[Schema="dbo",Item="sales"]}[Data],
-				    #"Removed Columns" = Table.RemoveColumns(dbo_sales,{"billingAddress", "returnRequested", "shippingAddress"})
+				    dbo_sales = Source{[Schema="dbo",Item="sales"]}[Data]
 				in
-				    #"Removed Columns"
+				    dbo_sales
 
 	annotation PBI_NavigationStepName = Navigation
 

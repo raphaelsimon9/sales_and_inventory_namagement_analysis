@@ -255,8 +255,8 @@ table 'All Measures'
 			RETURN
 			    IF (
 			        Change > 0,
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Month Title],
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Month Title]
+			        "Gap From Prev Month: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Month Title],
+			        "Gap From Prev Month: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Month Title]
 			    )
 		displayFolder: Arrows
 		lineageTag: 68ccbff4-d74e-4b3a-900d-c516d6aa3350
@@ -341,8 +341,8 @@ table 'All Measures'
 			RETURN
 			    IF (
 			        Change > 0,
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Month Title],
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Month Title]
+			        "Gap From Prev Month: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Month Title],
+			        "Gap From Prev Month: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Month Title]
 			    )
 		displayFolder: Arrows
 		lineageTag: f5368ee0-225a-4e20-a9da-eaefa716840f
@@ -407,15 +407,15 @@ table 'All Measures'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'MTD Sales Quantity % Display' =
+	measure 'MTD Units Sold % Display' =
 			
 			VAR Change = [MoM % Sales Quantity Change]
 			VAR diff = [MTD Units Sold] - [Previous Month Sales Quantity (From MTD)]
 			RETURN
 			    IF (
 			        Change > 0,
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Month Title],
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Month Title]
+			        "Gap From Prev Month: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Month Title],
+			        "Gap From Prev Month: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Month Title]
 			    )
 		displayFolder: Arrows
 		lineageTag: 71619692-71ea-4b29-99e8-1deac8fc108c
@@ -466,8 +466,8 @@ table 'All Measures'
 			RETURN
 			    IF (
 			        Change > 0,
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Prev Year Title],
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Prev Year Title]
+			        "Gap From Prev Year: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Prev Year Title],
+			        "Gap From Prev Year: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Prev Year Title]
 			    )
 		displayFolder: Arrows
 		lineageTag: 65a53db5-27cb-4219-a764-cac0b2d72feb
@@ -553,8 +553,8 @@ table 'All Measures'
 			RETURN
 			    IF (
 			        Change > 0,
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Prev Year Title],
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Prev Year Title]
+			        "Gap From Prev Year: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Prev Year Title],
+			        "Gap From Prev Year: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Prev Year Title]
 			    )
 		displayFolder: Arrows
 		lineageTag: 0a668c33-c518-4052-8db9-ef8126ef2f5d
@@ -586,8 +586,8 @@ table 'All Measures'
 			RETURN
 			    IF (
 			        Change > 0,
-			        FORMAT ( Change, "0.00%" ) & " ▲",
-			        FORMAT ( Change, "0.00%" ) & " ▼"
+			        "Prev Year: " & FORMAT ( Change, "0.00%" ) & " ▲",
+			        "Prev Year: " & FORMAT ( Change, "0.00%" ) & " ▼"
 			    )
 		displayFolder: Arrows
 		lineageTag: d9137940-2a53-4ed2-8540-7875a9c18533
@@ -615,8 +615,8 @@ table 'All Measures'
 			RETURN
 			    IF (
 			        Change > 0,
-			        FORMAT ( Change, "0.00%" ) & " ▲",
-			        FORMAT ( Change, "0.00%" ) & " ▼"
+			        "Prev Year: " & FORMAT ( Change, "0.00%" ) & " ▲",
+			        "Prev Year: " & FORMAT ( Change, "0.00%" ) & " ▼"
 			    )
 		displayFolder: Arrows
 		lineageTag: 7fae059c-23e4-4be9-84e2-bb6f8e365498
@@ -734,8 +734,8 @@ table 'All Measures'
 			RETURN
 			    IF (
 			        Change > 0,
-			        FORMAT ( Change, "0.00%" ) & " ▲",
-			        FORMAT ( Change, "0.00%" ) & " ▼"
+			        "Prev Year: " & FORMAT ( Change, "0.00%" ) & " ▲",
+			        "Prev Year: " & FORMAT ( Change, "0.00%" ) & " ▼"
 			    )
 		displayFolder: Arrows
 		lineageTag: 4371bf22-9572-4ce7-97c2-07ad094ed7f4
@@ -787,8 +787,8 @@ table 'All Measures'
 			RETURN
 			    IF (
 			        Change > 0,
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Prev Year Title],
-			        FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Prev Year Title]
+			        "Gap From Prev Year: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▲ " & [Prev Year Title],
+			        "Gap From Prev Year: " & UNICHAR(10) & FORMAT ( diff, "#,0" ) & " | " & FORMAT ( Change, "0.00%" ) & " ▼ " & [Prev Year Title]
 			    )
 		displayFolder: Arrows
 		lineageTag: f76b27f5-7231-4e0e-afcd-679c383285ce
@@ -1120,7 +1120,36 @@ table 'All Measures'
 			
 			    "Details"
 			)
+		displayFolder: Dynamic Tooltip
 		lineageTag: c4101f83-f7fc-40c7-bcc2-f912520eaa5e
+
+	measure 'Customers Bought' =
+			
+			VAR Mtds = DATESMTD('Calendar'[Date])
+			
+			RETURN
+			CALCULATE(
+			    COUNTROWS(
+			        INTERSECT(SELECTCOLUMNS(customers, "CustomerId",customers[customerId]),
+			                SELECTCOLUMNS(sales, "CustomerId", sales[customerId])
+			        )
+			    ),
+			    Mtds
+			)
+		formatString: 0
+		displayFolder: Customer Insights
+		lineageTag: 6c58ac8a-8843-4b21-9ac0-5e659b5023a4
+
+	measure 'Customers Bought This Month' = ```
+			
+			    CALCULATE(
+			        DISTINCTCOUNT(sales[customerId]),
+			        DATESMTD('Calendar'[Date])
+			    )
+			```
+		formatString: 0
+		displayFolder: Customer Insights
+		lineageTag: e92a37ec-c50a-4f5e-b992-7aa92bcdbfcd
 
 	partition 'All Measures' = m
 		mode: import

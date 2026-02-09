@@ -4477,39 +4477,6 @@ cultureInfo en-US
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "sale.tracking_number": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "sales",
-			          "ConceptualProperty": "trackingNumber"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "tracking number": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "trackingNumber": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "tracking no": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        }
-			      ]
-			    },
 			    "sale.carrier": {
 			      "Definition": {
 			        "Binding": {
@@ -19222,22 +19189,32 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "all_measure.MTD_sales_quantity__display": {
+			    "all_measure.MTD_units_sold__display": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "All Measures",
-			          "ConceptualProperty": "MTD Sales Quantity % Display"
+			          "ConceptualProperty": "MTD Units Sold % Display"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "MTD sales quantity % display": {
+			          "MTD units sold % display": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "mtd sale quantity percentage display": {
+			          "mtd unit sold % display": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.693
+			          }
+			        },
+			        {
+			          "mtd unit sold percentage display": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -19247,7 +19224,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "mtd sale quantity % display": {
+			          "mtd unit sold pct display": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -19257,17 +19234,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "mtd sale quantity pct display": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.605
-			          }
-			        },
-			        {
-			          "mtd sale quantity % exhibition": {
+			          "mtd unit sold % exhibition": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -19277,7 +19244,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "mtd sale quantity % presentation": {
+			          "mtd unit sold % presentation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -19287,7 +19254,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "mtd sale quantity % demonstration": {
+			          "mtd unit sold % demonstration": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -19297,7 +19264,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "mtd sale quantity % spectacle": {
+			          "mtd unit sold % spectacle": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -19307,7 +19274,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "mtd sale quantity % ceremony": {
+			          "mtd unit sold % ceremony": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -19317,7 +19284,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "mtd sale quantity % pageant": {
+			          "mtd unit sold % pageant": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -19327,7 +19294,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "mtd sale quantity % show": {
+			          "mtd unit sold % show": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -28112,9 +28079,720 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "sale.shipping_address": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sales",
+			          "ConceptualProperty": "shippingAddress"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "shipping address": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "shippingAddress": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "shipping location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "shipping direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "shipping residence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "shipping contact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "shipping place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "sale.billing_address": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sales",
+			          "ConceptualProperty": "billingAddress"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "billing address": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "billingAddress": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "billing location": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "billing direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "billing residence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "billing contact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "billing place": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "sale.return_requested": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sales",
+			          "ConceptualProperty": "returnRequested"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "return requested": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "returnRequested": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "reappearance requested": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "reoccurrence requested": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "homecoming requested": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "arrival requested": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "revenue requested": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "profit requested": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "yield requested": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "gain requested": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "benefit requested": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "sale.tracking_number": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sales",
+			          "ConceptualProperty": "trackingNumber"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tracking number": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "trackingNumber": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "tracking no": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "sales_item.barcode": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sales_items",
+			          "ConceptualProperty": "barcode"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "barcode": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.dynamic_tooltip_title": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measures",
+			          "ConceptualProperty": "Dynamic Tooltip Title"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dynamic tooltip title": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "title": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "tooltip title": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dynamic tooltip designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "tooltip designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "dynamic tooltip name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "dynamic tooltip award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "dynamic tooltip call": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "dynamic tooltip heading": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "dynamic tooltip label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "designation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "tooltip name": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "tooltip award": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.customers_bought": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measures",
+			          "ConceptualProperty": "Customers Bought"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customers bought": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "clientele bought": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "patron bought": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "client bought": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "consumer bought": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "punter bought": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "regular bought": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "custom bought": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "trade bought": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "business bought": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "following bought": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.customers_bought_this_month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measures",
+			          "ConceptualProperty": "Customers Bought This Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "customers bought this month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "customer bought this mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.617
+			          }
+			        },
+			        {
+			          "clientele bought this month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "patron bought this month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "client bought this month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "consumer bought this month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "punter bought this month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "regular bought this month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "custom bought this month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "trade bought this month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "business bought this month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "Custs Bought This Month": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "revenue_goal_has_all_measure_increase___decrease_revenue_goal": {
+			      "Binding": {
+			        "ConceptualEntity": "Revenue Goal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "revenue_goal": {
+			          "Target": {
+			            "Entity": "revenue_goal"
+			          }
+			        },
+			        "all_measure.increase___decrease_revenue_goal": {
+			          "Target": {
+			            "Entity": "all_measure.increase___decrease_revenue_goal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "revenue_goal"
+			            },
+			            "Object": {
+			              "Role": "all_measure.increase___decrease_revenue_goal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "revenue_goals_have_increase___decrease_revenue_goal"
+			        }
+			      ]
+			    },
 			    "revenue_goal_has_all_measure_revenue_goal1": {
 			      "Binding": {
 			        "ConceptualEntity": "Revenue Goal"
@@ -30366,7 +31044,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_MTD_sales_quantity__display": {
+			    "sale_has_all_measure_MTD_units_sold__display": {
 			      "Binding": {
 			        "ConceptualEntity": "sales"
 			      },
@@ -30377,9 +31055,9 @@ cultureInfo en-US
 			            "Entity": "sale"
 			          }
 			        },
-			        "all_measure.MTD_sales_quantity__display": {
+			        "all_measure.MTD_units_sold__display": {
 			          "Target": {
-			            "Entity": "all_measure.MTD_sales_quantity__display"
+			            "Entity": "all_measure.MTD_units_sold__display"
 			          }
 			        }
 			      },
@@ -30390,16 +31068,16 @@ cultureInfo en-US
 			              "Role": "sale"
 			            },
 			            "Object": {
-			              "Role": "all_measure.MTD_sales_quantity__display"
+			              "Role": "all_measure.MTD_units_sold__display"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_MTD_sales_quantity__display"
+			          "ID": "sales_have_MTD_units_sold__display"
 			        }
 			      ]
 			    },
-			    "calendar_has_all_measure_MTD_sales_quantity__display": {
+			    "calendar_has_all_measure_MTD_units_sold__display": {
 			      "Binding": {
 			        "ConceptualEntity": "Calendar"
 			      },
@@ -30410,9 +31088,9 @@ cultureInfo en-US
 			            "Entity": "calendar"
 			          }
 			        },
-			        "all_measure.MTD_sales_quantity__display": {
+			        "all_measure.MTD_units_sold__display": {
 			          "Target": {
-			            "Entity": "all_measure.MTD_sales_quantity__display"
+			            "Entity": "all_measure.MTD_units_sold__display"
 			          }
 			        }
 			      },
@@ -30423,12 +31101,12 @@ cultureInfo en-US
 			              "Role": "calendar"
 			            },
 			            "Object": {
-			              "Role": "all_measure.MTD_sales_quantity__display"
+			              "Role": "all_measure.MTD_units_sold__display"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "calendars_have_MTD_sales_quantity__display"
+			          "ID": "calendars_have_MTD_units_sold__display"
 			        }
 			      ]
 			    },
@@ -33903,19 +34581,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.95,
 			          "ID": "products_is_on_is_on_sale"
-			        },
-			        {
-			          "DynamicAdjective": {
-			            "Subject": {
-			              "Role": "product"
-			            },
-			            "Adjective": {
-			              "Role": "product.is_on_sale"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "is_on_sale_describe_products"
 			        }
 			      ]
 			    },
@@ -33949,19 +34614,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "products_have_is_featured"
-			        },
-			        {
-			          "DynamicAdjective": {
-			            "Subject": {
-			              "Role": "product"
-			            },
-			            "Adjective": {
-			              "Role": "product.is_featured"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "is_featured_describe_products"
 			        }
 			      ]
 			    },
@@ -33995,19 +34647,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "products_have_is_actives"
-			        },
-			        {
-			          "DynamicAdjective": {
-			            "Subject": {
-			              "Role": "product"
-			            },
-			            "Adjective": {
-			              "Role": "product.is_active"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "is_actives_describe_products"
 			        }
 			      ]
 			    },
@@ -36198,39 +36837,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_tracking_number": {
-			      "Binding": {
-			        "ConceptualEntity": "sales"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sale": {
-			          "Target": {
-			            "Entity": "sale"
-			          }
-			        },
-			        "sale.tracking_number": {
-			          "Target": {
-			            "Entity": "sale.tracking_number"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sale"
-			            },
-			            "Object": {
-			              "Role": "sale.tracking_number"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sales_have_tracking_numbers"
-			        }
-			      ]
-			    },
 			    "sale_has_actual_delivery": {
 			      "Binding": {
 			        "ConceptualEntity": "sales"
@@ -37671,6 +38277,96 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "sale_in_billing_address": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "sale.billing_address": {
+			          "Target": {
+			            "Entity": "sale.billing_address"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "sale.billing_address"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "sale.billing_address"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_are_in_billing_addresses"
+			        }
+			      ]
+			    },
+			    "sale_in_shipping_address": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "sale.shipping_address": {
+			          "Target": {
+			            "Entity": "sale.shipping_address"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "Where": {
+			          "Role": "sale.shipping_address"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "sale.shipping_address"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_are_in_shipping_addresses"
+			        }
+			      ]
+			    },
 			    "salesperson_in_all_measure_unitsrevenueprofit_region__country_title": {
 			      "Binding": {
 			        "ConceptualEntity": "salespeople"
@@ -39045,6 +39741,61 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "sale_is_return_requested": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "sale.return_requested": {
+			          "Target": {
+			            "Entity": "sale.return_requested"
+			          }
+			        }
+			      },
+			      "Conditions": [
+			        {
+			          "Target": {
+			            "Role": "sale.return_requested"
+			          },
+			          "Operator": "Equals",
+			          "Value": {
+			            "Boolean": [
+			              true
+			            ]
+			          }
+			        }
+			      ],
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Adjectives": [
+			              {
+			                "return requested": {
+			                  "State": "Generated"
+			                }
+			              },
+			              {
+			                "return-requested": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "some_sales_are_return_requested_sales"
+			        }
+			      ]
+			    },
 			    "manager_manage_sale": {
 			      "Binding": {
 			        "ConceptualEntity": "sales"
@@ -39154,39 +39905,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dynamic_rev_unit_prof_lines_have_dynamic_rev_unit_prof_lines"
-			        }
-			      ]
-			    },
-			    "revenue_goal_has_all_measure_increase___decrease_revenue_goal": {
-			      "Binding": {
-			        "ConceptualEntity": "Revenue Goal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "revenue_goal": {
-			          "Target": {
-			            "Entity": "revenue_goal"
-			          }
-			        },
-			        "all_measure.increase___decrease_revenue_goal": {
-			          "Target": {
-			            "Entity": "all_measure.increase___decrease_revenue_goal"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "revenue_goal"
-			            },
-			            "Object": {
-			              "Role": "all_measure.increase___decrease_revenue_goal"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "revenue_goals_have_increase___decrease_revenue_goal"
 			        }
 			      ]
 			    },
@@ -39913,6 +40631,336 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "sales_have__previous_year_units_sold_color"
+			        }
+			      ]
+			    },
+			    "sale_has_shipping_address": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "sale.shipping_address": {
+			          "Target": {
+			            "Entity": "sale.shipping_address"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Object": {
+			              "Role": "sale.shipping_address"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_have_shipping_addresses"
+			        }
+			      ]
+			    },
+			    "sale_has_billing_address": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "sale.billing_address": {
+			          "Target": {
+			            "Entity": "sale.billing_address"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Object": {
+			              "Role": "sale.billing_address"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_have_billing_addresses"
+			        }
+			      ]
+			    },
+			    "sale_has_return_requested": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "sale.return_requested": {
+			          "Target": {
+			            "Entity": "sale.return_requested"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Object": {
+			              "Role": "sale.return_requested"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_have_return_requested"
+			        }
+			      ]
+			    },
+			    "sale_has_tracking_number": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "sale.tracking_number": {
+			          "Target": {
+			            "Entity": "sale.tracking_number"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Object": {
+			              "Role": "sale.tracking_number"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_have_tracking_numbers"
+			        }
+			      ]
+			    },
+			    "sales_item_has_barcode": {
+			      "Binding": {
+			        "ConceptualEntity": "sales_items"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_item": {
+			          "Target": {
+			            "Entity": "sales_item"
+			          }
+			        },
+			        "sales_item.barcode": {
+			          "Target": {
+			            "Entity": "sales_item.barcode"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_item"
+			            },
+			            "Object": {
+			              "Role": "sales_item.barcode"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_items_have_barcodes"
+			        }
+			      ]
+			    },
+			    "calendar_has_all_measure_dynamic_tooltip_title": {
+			      "Binding": {
+			        "ConceptualEntity": "Calendar"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "calendar": {
+			          "Target": {
+			            "Entity": "calendar"
+			          }
+			        },
+			        "all_measure.dynamic_tooltip_title": {
+			          "Target": {
+			            "Entity": "all_measure.dynamic_tooltip_title"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "calendar"
+			            },
+			            "Object": {
+			              "Role": "all_measure.dynamic_tooltip_title"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "calendars_have_dynamic_tooltip_title"
+			        }
+			      ]
+			    },
+			    "sale_has_all_measure_dynamic_tooltip_title": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "all_measure.dynamic_tooltip_title": {
+			          "Target": {
+			            "Entity": "all_measure.dynamic_tooltip_title"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Object": {
+			              "Role": "all_measure.dynamic_tooltip_title"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_have_dynamic_tooltip_title"
+			        }
+			      ]
+			    },
+			    "customer_has_all_measure_customers_bought": {
+			      "Binding": {
+			        "ConceptualEntity": "customers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer": {
+			          "Target": {
+			            "Entity": "customer"
+			          }
+			        },
+			        "all_measure.customers_bought": {
+			          "Target": {
+			            "Entity": "all_measure.customers_bought"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer"
+			            },
+			            "Object": {
+			              "Role": "all_measure.customers_bought"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customers_have_customers_bought"
+			        }
+			      ]
+			    },
+			    "sale_has_all_measure_customers_bought": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "all_measure.customers_bought": {
+			          "Target": {
+			            "Entity": "all_measure.customers_bought"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Object": {
+			              "Role": "all_measure.customers_bought"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_have_customers_bought"
+			        }
+			      ]
+			    },
+			    "sale_has_all_measure_customers_bought_this_month": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "all_measure.customers_bought_this_month": {
+			          "Target": {
+			            "Entity": "all_measure.customers_bought_this_month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Object": {
+			              "Role": "all_measure.customers_bought_this_month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_have_customers_bought_this_month"
 			        }
 			      ]
 			    },

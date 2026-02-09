@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 552.458593717647,
+        "x": 552.62551895225533,
         "y": 0
       },
       "nodes": [
@@ -16,10 +16,11 @@
           "nodeIndex": "sales",
           "nodeLineageTag": "08c3d125-6ba5-4882-a435-8da1439ec7c0",
           "size": {
-            "height": 318,
+            "height": 219,
             "width": 234
           },
-          "zIndex": 16
+          "zIndex": 16,
+          "expandedHeight": 318
         },
         {
           "location": {

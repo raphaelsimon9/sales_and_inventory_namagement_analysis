@@ -186,6 +186,21 @@
           "selector": {
             "metadata": "All Measures.YTD Units Sold"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "All Measures.YTD Units Sold",
+            "id": "field-21a88228-7f53-2cde-27d4-5e62b8b18542"
+          }
         }
       ],
       "referenceLabelDetail": [
@@ -201,6 +216,21 @@
           },
           "selector": {
             "metadata": "All Measures.YTD Revenue"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "All Measures.YTD Units Sold",
+            "id": "field-21a88228-7f53-2cde-27d4-5e62b8b18542"
           }
         }
       ],
@@ -301,6 +331,13 @@
                   "Value": "13D"
                 }
               }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           },
           "selector": {
@@ -335,6 +372,28 @@
               }
             ],
             "metadata": "All Measures.YTD Units Sold"
+          }
+        },
+        {
+          "properties": {
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "valueTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "All Measures.YTD Units Sold",
+            "id": "field-21a88228-7f53-2cde-27d4-5e62b8b18542"
           }
         }
       ],
@@ -403,6 +462,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -483,6 +549,13 @@
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

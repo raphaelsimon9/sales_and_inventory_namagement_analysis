@@ -41,7 +41,7 @@ table Calendar
 			QUARTER('Calendar'[Date])
 		formatString: 0
 		lineageTag: 25d76d45-da50-458d-9c07-6d6feed31812
-		summarizeBy: sum
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
@@ -50,7 +50,7 @@ table Calendar
 			YEAR('Calendar'[Date])
 		formatString: 0
 		lineageTag: 7a231a34-d804-4578-954c-710527146ebc
-		summarizeBy: sum
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
@@ -59,7 +59,7 @@ table Calendar
 			MONTH('Calendar'[Date])
 		formatString: 0
 		lineageTag: f8a4940f-528c-428e-a8e3-1e6250f18872
-		summarizeBy: sum
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
@@ -77,7 +77,7 @@ table Calendar
 			WEEKNUM('Calendar'[Date], 11)
 		formatString: 0
 		lineageTag: c0c888e0-1a91-4a4b-a915-d5a15156375a
-		summarizeBy: sum
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
@@ -86,7 +86,7 @@ table Calendar
 			WEEKDAY('Calendar'[Date], 2)
 		formatString: 0
 		lineageTag: ac3d93b4-2ee4-4755-9410-d313fb3be249
-		summarizeBy: sum
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
@@ -95,7 +95,7 @@ table Calendar
 			DAY('Calendar'[Date])
 		formatString: 0
 		lineageTag: cb12a058-e5bb-4b79-8419-7626d816f730
-		summarizeBy: sum
+		summarizeBy: none
 
 		annotation SummarizationSetBy = Automatic
 
@@ -123,7 +123,7 @@ table Calendar
 				
 				    CALENDAR(
 				        MIN(sales[orderDate]),
-				        MAX(sales[orderDate])
+				        UTCTODAY()
 				    )
 				
 				```

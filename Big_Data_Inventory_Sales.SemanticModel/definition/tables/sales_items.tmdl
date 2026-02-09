@@ -260,16 +260,25 @@ table sales_items
 
 		annotation SummarizationSetBy = Automatic
 
+	column barcode
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 51d6a3a3-dd55-46bc-abb0-4cf4b540a2a5
+		summarizeBy: sum
+		sourceColumn: barcode
+
+		annotation SummarizationSetBy = Automatic
+
 	partition sales_items = m
 		mode: dual
 		source =
 				let
 				    Source = Sql.Database("RAFAEL", "inventory_sales_report"),
-				    dbo_sales_items = Source{[Schema="dbo",Item="sales_items"]}[Data],
-				    #"Changed Type" = Table.TransformColumnTypes(dbo_sales_items,{{"taxRate", type number}}),
-				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"barcode"})
+				    dbo_sales_items = Source{[Schema="dbo",Item="sales_items"]}[Data]
 				in
-				    #"Removed Columns"
+				    dbo_sales_items
 
 	annotation PBI_NavigationStepName = Navigation
 
