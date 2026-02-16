@@ -10,7 +10,7 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_QueryOrder = ["sales","sales_items","products","customers","salespeople","managers","All Measures","Country Colors","Refresh Timestamp"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","TMDLView_Desktop"]
 
 annotation __TEdtr = 1
 

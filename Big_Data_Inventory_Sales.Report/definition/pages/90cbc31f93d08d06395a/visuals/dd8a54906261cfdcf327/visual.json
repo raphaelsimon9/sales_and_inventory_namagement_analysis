@@ -105,6 +105,13 @@
                   "Value": "true"
                 }
               }
+            },
+            "preferredCategoryWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
+                }
+              }
             }
           }
         }
@@ -321,6 +328,13 @@
                   "Value": "'Monthly Sales Quantity'"
                 }
               }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
             }
           }
         }
@@ -499,6 +513,19 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

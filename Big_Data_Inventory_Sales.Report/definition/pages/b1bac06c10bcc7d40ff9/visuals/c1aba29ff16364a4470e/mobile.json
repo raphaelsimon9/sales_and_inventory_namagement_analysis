@@ -3,19 +3,19 @@
   "position": {
     "x": 0,
     "y": 1280,
-    "z": 20000,
+    "z": 36000,
     "height": 180,
     "width": 324,
-    "tabOrder": 30000
+    "tabOrder": 36000
   },
   "visualContainerObjects": {
     "title": [
       {
         "properties": {
-          "fontSize": {
+          "fontFamily": {
             "expr": {
               "Literal": {
-                "Value": "9D"
+                "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
               }
             }
           }
@@ -24,6 +24,9 @@
     ],
     "background": [],
     "padding": [],
+    "border": [],
+    "visualTooltip": [],
+    "spacing": [],
     "dropShadow": [
       {
         "properties": {
@@ -89,7 +92,6 @@
           }
         }
       }
-    ],
-    "visualTooltip": []
+    ]
   }
 }

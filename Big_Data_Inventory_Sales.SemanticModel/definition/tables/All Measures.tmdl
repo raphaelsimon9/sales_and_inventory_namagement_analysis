@@ -18,8 +18,8 @@ table 'All Measures'
 	measure 'Total Revenue' =
 			
 			CALCULATE (
-			    SUMX ( sales, sales[totalAmount] ),
-			    USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			    SUMX ( sales_items, sales_items[totalAmount] ),
+			    USERELATIONSHIP ( 'Calendar'[Date], sales_items[orderDate] )
 			)
 		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
 		displayFolder: Revenue Measures
@@ -351,9 +351,8 @@ table 'All Measures'
 			
 			COALESCE (
 			    CALCULATE (
-			        SUMX ( sales, sales[totalQuantity] ),
-			        USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] ),
-			        USERELATIONSHIP ( sales[orderId], sales_items[orderId] )
+			        SUMX ( sales_items, sales_items[Quantity] ),
+			        USERELATIONSHIP ( 'Calendar'[Date], sales_items[orderDate] )
 			    ),
 			    0
 			)
@@ -631,8 +630,8 @@ table 'All Measures'
 	measure 'Total Orders' =
 			
 			CALCULATE (
-			    DISTINCTCOUNT ( sales[orderId] ),
-			    USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			    DISTINCTCOUNT ( sales_items[orderId] ),
+			    USERELATIONSHIP ( 'Calendar'[Date], sales_items[orderDate] )
 			)
 		formatString: #,0
 		displayFolder: Sales Measures
@@ -700,8 +699,8 @@ table 'All Measures'
 	measure 'Average Order Value' =
 			
 			CALCULATE(
-			    DIVIDE([Total Revenue],COUNTROWS(sales)),
-			    USERELATIONSHIP ( 'Calendar'[Date], sales[orderDate] )
+			    DIVIDE([Total Revenue],DISTINCTCOUNT(sales_items[orderId])),
+			    USERELATIONSHIP ( 'Calendar'[Date], sales_items[orderDate] )
 			)
 		formatString: \$#,0;(\$#,0);\$#,0
 		displayFolder: Sales Measures

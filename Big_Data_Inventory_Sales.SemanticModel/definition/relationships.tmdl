@@ -20,11 +20,6 @@ relationship 4efab8b9-0501-7f2e-4ea6-218adcff1209
 	fromColumn: sales_items.productId
 	toColumn: products.productId
 
-relationship f62eeee9-4260-28e1-edec-f32b039495d0
-	isActive: false
-	fromColumn: sales_items.orderId
-	toColumn: sales.orderId
-
 relationship 70425a06-f81b-28ca-e79f-3aa44cb7d745
 	fromColumn: sales_items.salespersonId
 	toColumn: salespeople.salespersonId

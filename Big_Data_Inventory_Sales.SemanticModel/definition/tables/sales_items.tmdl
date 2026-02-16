@@ -251,15 +251,6 @@ table sales_items
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column 'Total Revenue (lineTotal & taxAmount)' =
-			
-			sales_items[lineTotal] + sales_items[taxAmount]
-		formatString: \$#,0;(\$#,0);\$#,0
-		lineageTag: 4e1ceeda-bec0-4965-8069-0ce783125271
-		summarizeBy: sum
-
-		annotation SummarizationSetBy = Automatic
-
 	column barcode
 		dataType: int64
 		isNullable: false
@@ -270,6 +261,28 @@ table sales_items
 		sourceColumn: barcode
 
 		annotation SummarizationSetBy = Automatic
+
+	column shippingCost
+		dataType: double
+		sourceProviderType: float
+		lineageTag: 42e39797-ba9d-4f0c-b466-8a1743bd4d49
+		summarizeBy: sum
+		sourceColumn: shippingCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column totalAmount
+		dataType: double
+		sourceProviderType: float
+		lineageTag: ba867c6e-a6b0-4928-a75b-68ccbcc92f1b
+		summarizeBy: sum
+		sourceColumn: totalAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	partition sales_items = m
 		mode: dual

@@ -3,10 +3,10 @@
   "position": {
     "x": 10,
     "y": 120,
-    "z": 31500,
+    "z": 30000,
     "height": 32,
     "width": 80,
-    "tabOrder": 33000
+    "tabOrder": 32000
   },
   "objects": {
     "data": [],

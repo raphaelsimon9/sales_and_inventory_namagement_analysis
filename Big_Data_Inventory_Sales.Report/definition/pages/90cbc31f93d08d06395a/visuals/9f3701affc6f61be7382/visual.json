@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "sales"
+                      "Entity": "customers"
                     }
                   },
-                  "Property": "salesRegion"
+                  "Property": "region"
                 }
               },
-              "queryRef": "sales.salesRegion",
+              "queryRef": "customers.region",
               "nativeQueryRef": "Region",
               "active": true,
               "displayName": "Region"
@@ -489,15 +489,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c3f76e71e6520db0d0b7",
+        "name": "5fdc759cb3a72feaf863",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "sales"
+                "Entity": "customers"
               }
             },
-            "Property": "salesRegion"
+            "Property": "region"
           }
         },
         "type": "Categorical",
@@ -505,8 +505,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "s",
-              "Entity": "sales",
+              "Name": "c",
+              "Entity": "customers",
               "Type": 0
             }
           ],
@@ -521,10 +521,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "s"
+                                "Source": "c"
                               }
                             },
-                            "Property": "salesRegion"
+                            "Property": "region"
                           }
                         }
                       ],

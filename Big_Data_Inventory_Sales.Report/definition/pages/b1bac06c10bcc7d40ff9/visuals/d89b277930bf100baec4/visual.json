@@ -4,10 +4,10 @@
   "position": {
     "x": 182.82305951271468,
     "y": 174,
-    "z": 10000,
-    "height": 525,
-    "width": 880.17694048728526,
-    "tabOrder": 7000
+    "z": 11000,
+    "height": 526,
+    "width": 881.17694048728526,
+    "tabOrder": 6000
   },
   "visualGroup": {
     "displayName": "Revenue Report Group",

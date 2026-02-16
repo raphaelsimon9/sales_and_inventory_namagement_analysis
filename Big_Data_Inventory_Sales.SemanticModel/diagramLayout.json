@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 552.458593717647,
+        "x": 552.62551895225533,
         "y": 0
       },
       "nodes": [
@@ -227,20 +227,6 @@
         },
         {
           "location": {
-            "x": 1965.3678429097447,
-            "y": 253.1556943030559
-          },
-          "nodeIndex": "Measure Selection",
-          "nodeLineageTag": "fbfb3f82-5b31-4dde-bab4-e7f533bc077c",
-          "size": {
-            "height": 72,
-            "width": 234
-          },
-          "zIndex": 3,
-          "expandedHeight": 200
-        },
-        {
-          "location": {
             "x": 1968.6285767571142,
             "y": 375.80901460977861
           },
@@ -274,6 +260,19 @@
           "nodeLineageTag": "492cbb2c-40cb-497f-ba59-95ba29b82a76",
           "size": {
             "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2820.6285767571144,
+            "y": 301.83969262820597
+          },
+          "nodeIndex": "Measure Selection",
+          "nodeLineageTag": "fbfb3f82-5b31-4dde-bab4-e7f533bc077c",
+          "size": {
+            "height": 128,
             "width": 234
           },
           "zIndex": 0

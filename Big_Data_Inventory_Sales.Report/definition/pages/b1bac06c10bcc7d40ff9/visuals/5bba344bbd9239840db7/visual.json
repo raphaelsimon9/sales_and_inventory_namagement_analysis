@@ -4,10 +4,10 @@
   "position": {
     "x": 506.75116495806151,
     "y": 174.23405671681533,
-    "z": 12000,
+    "z": 13000,
     "height": 35.5830115830116,
     "width": 557.05818133404341,
-    "tabOrder": 12000
+    "tabOrder": 11000
   },
   "visualGroup": {
     "displayName": "Button Group",

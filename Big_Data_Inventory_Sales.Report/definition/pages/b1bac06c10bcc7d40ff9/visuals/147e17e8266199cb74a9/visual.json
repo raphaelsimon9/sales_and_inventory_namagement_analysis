@@ -3,11 +3,11 @@
   "name": "147e17e8266199cb74a9",
   "position": {
     "x": 33.176940487285322,
-    "y": 313,
-    "z": 4000,
+    "y": 316,
+    "z": 3000,
     "height": 200.00106510451337,
     "width": 307.97710025296232,
-    "tabOrder": 18008
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -33,6 +33,21 @@
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "All Measures"
+                  }
+                },
+                "Property": "MTD Revenue"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -162,6 +177,20 @@
                   "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
                 }
               }
+            },
+            "textWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'belowValue'"
+                }
+              }
             }
           },
           "selector": {
@@ -175,7 +204,7 @@
             "verticalSpacing": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "0L"
                 }
               }
             }
@@ -247,6 +276,17 @@
           },
           "selector": {
             "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ],
@@ -455,7 +495,35 @@
             "cellPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "8L"
+                  "Value": "0L"
+                }
+              }
+            },
+            "columnCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "autoGrid": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "rowCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
                 }
               }
             }
@@ -476,6 +544,20 @@
           "selector": {
             "metadata": "All Measures.MTD Revenue"
           }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
         }
       ],
       "referenceLabelValue": [
@@ -484,7 +566,7 @@
             "valueFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "13D"
+                  "Value": "12D"
                 }
               }
             }
@@ -521,6 +603,20 @@
               }
             ],
             "metadata": "All Measures.MTD Revenue"
+          }
+        },
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]

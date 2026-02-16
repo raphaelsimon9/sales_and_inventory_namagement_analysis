@@ -1733,16 +1733,6 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.727
 			          }
-			        },
-			        {
-			          "Region": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -18377,7 +18367,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "all_measure.new_customers": {
+			    "all_measure.YTD_new_customers": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "All Measures",
@@ -18387,114 +18377,108 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "new customers": {
+			          "YTD new customers": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "customers": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "new clientele": {
+			          "ytd new clientele": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "new patron": {
+			          "ytd new patron": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "new client": {
+			          "ytd new client": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "new consumer": {
+			          "ytd new consumer": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "new punter": {
+			          "ytd new punter": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "clientele": {
+			          "year to date new customer": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.498
 			          }
 			        },
 			        {
-			          "patron": {
+			          "ytd new regular": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.492
 			          }
 			        },
 			        {
-			          "client": {
+			          "ytd new custom": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.492
 			          }
 			        },
 			        {
-			          "consumer": {
+			          "ytd new trade": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.492
 			          }
 			        },
 			        {
-			          "punter": {
+			          "ytd new business": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.492
 			          }
 			        }
 			      ]
@@ -20452,28 +20436,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.714
-			          }
-			        }
-			      ]
-			    },
-			    "sales_item.total_revenue_lineTotal__taxAmount": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "sales_items",
-			          "ConceptualProperty": "Total Revenue (lineTotal & taxAmount)"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "total revenue (lineTotal & taxAmount)": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "total revenue": {
-			            "State": "Generated",
-			            "Weight": 0.75
 			          }
 			        }
 			      ]
@@ -28757,9 +28719,687 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "sales_item.shipping_cost": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sales_items",
+			          "ConceptualProperty": "shippingCost"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "shipping cost": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "shippingCost": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "cost": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "shipping price": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "shipping charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "shipping rate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "shipping fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "shipping total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "charge": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "fee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "shipping expenditure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "expenditure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "shipping budget": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "sales_item.total_amount": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "sales_items",
+			          "ConceptualProperty": "totalAmount"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total amount": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "totalAmount": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aggregate amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total volume": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total expanse": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total sum": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total total": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total aggregate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.MTD_new_customers": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measures",
+			          "ConceptualProperty": "MTD New Customers"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "MTD new customers": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mtd new clientele": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "mtd new patron": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "mtd new client": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "mtd new consumer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "mtd new punter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "mtd new regular": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "mtd new custom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "mtd new trade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "mtd new business": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "mtd new following": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "measure_selection_has_measure_name": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Selection"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_selection": {
+			          "Target": {
+			            "Entity": "measure_selection"
+			          }
+			        },
+			        "measure_selection.measure_name": {
+			          "Target": {
+			            "Entity": "measure_selection.measure_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_selection"
+			            },
+			            "Object": {
+			              "Role": "measure_selection.measure_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_selections_have_measure_names"
+			        }
+			      ]
+			    },
+			    "revenue_goal_has_revenue_goal_value": {
+			      "Binding": {
+			        "ConceptualEntity": "Revenue Goal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "revenue_goal": {
+			          "Target": {
+			            "Entity": "revenue_goal"
+			          }
+			        },
+			        "revenue_goal.revenue_goal_value": {
+			          "Target": {
+			            "Entity": "revenue_goal.revenue_goal_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "revenue_goal"
+			            },
+			            "Object": {
+			              "Role": "revenue_goal.revenue_goal_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "revenue_goals_have_revenue_goal_value"
+			        }
+			      ]
+			    },
+			    "revenue_goal_has_revenue_goal": {
+			      "Binding": {
+			        "ConceptualEntity": "Revenue Goal"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "revenue_goal": {
+			          "Target": {
+			            "Entity": "revenue_goal"
+			          }
+			        },
+			        "revenue_goal.revenue_goal": {
+			          "Target": {
+			            "Entity": "revenue_goal.revenue_goal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "revenue_goal"
+			            },
+			            "Object": {
+			              "Role": "revenue_goal.revenue_goal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "revenue_goals_have_revenue_goals"
+			        }
+			      ]
+			    },
+			    "sale_has_all_measure_last_purchase_date": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "all_measure.last_purchase_date": {
+			          "Target": {
+			            "Entity": "all_measure.last_purchase_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Object": {
+			              "Role": "all_measure.last_purchase_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_have_last_purchase_date"
+			        }
+			      ]
+			    },
+			    "salesperson_has_all_measure_unitsrevenueprofit_region__country_title": {
+			      "Binding": {
+			        "ConceptualEntity": "salespeople"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "salesperson": {
+			          "Target": {
+			            "Entity": "salesperson"
+			          }
+			        },
+			        "all_measure.unitsrevenueprofit_region__country_title": {
+			          "Target": {
+			            "Entity": "all_measure.unitsrevenueprofit_region__country_title"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "salesperson"
+			            },
+			            "Object": {
+			              "Role": "all_measure.unitsrevenueprofit_region__country_title"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "salespeople_have_unitsrevenueprofit_region__country_title"
+			        }
+			      ]
+			    },
+			    "dynamic_rev_unit_prof_line_has_all_measure_unitsrevenueprofit_region__country_title": {
+			      "Binding": {
+			        "ConceptualEntity": "Dynamic Rev, Unit, Prof, Line"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dynamic_rev_unit_prof_line": {
+			          "Target": {
+			            "Entity": "dynamic_rev_unit_prof_line"
+			          }
+			        },
+			        "all_measure.unitsrevenueprofit_region__country_title": {
+			          "Target": {
+			            "Entity": "all_measure.unitsrevenueprofit_region__country_title"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dynamic_rev_unit_prof_line"
+			            },
+			            "Object": {
+			              "Role": "all_measure.unitsrevenueprofit_region__country_title"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dynamic_rev_unit_prof_lines_have_unitsrevenueprofit_region__country_title"
+			        }
+			      ]
+			    },
+			    "sales_item_has_all_measure_dynamic_line_value": {
+			      "Binding": {
+			        "ConceptualEntity": "sales_items"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_item": {
+			          "Target": {
+			            "Entity": "sales_item"
+			          }
+			        },
+			        "all_measure.dynamic_line_value": {
+			          "Target": {
+			            "Entity": "all_measure.dynamic_line_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_item"
+			            },
+			            "Object": {
+			              "Role": "all_measure.dynamic_line_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_items_have_dynamic_line_value"
+			        }
+			      ]
+			    },
+			    "sale_has_all_measure_dynamic_line_value": {
+			      "Binding": {
+			        "ConceptualEntity": "sales"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sale": {
+			          "Target": {
+			            "Entity": "sale"
+			          }
+			        },
+			        "all_measure.dynamic_line_value": {
+			          "Target": {
+			            "Entity": "all_measure.dynamic_line_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sale"
+			            },
+			            "Object": {
+			              "Role": "all_measure.dynamic_line_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_have_dynamic_line_value"
+			        }
+			      ]
+			    },
+			    "measure_selection_has_all_measure_dynamic_line_value": {
+			      "Binding": {
+			        "ConceptualEntity": "Measure Selection"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "measure_selection": {
+			          "Target": {
+			            "Entity": "measure_selection"
+			          }
+			        },
+			        "all_measure.dynamic_line_value": {
+			          "Target": {
+			            "Entity": "all_measure.dynamic_line_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "measure_selection"
+			            },
+			            "Object": {
+			              "Role": "all_measure.dynamic_line_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "measure_selections_have_dynamic_line_value"
+			        }
+			      ]
+			    },
+			    "sales_item_has_all_measure_increase___decrease_revenue_goal": {
+			      "Binding": {
+			        "ConceptualEntity": "sales_items"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_item": {
+			          "Target": {
+			            "Entity": "sales_item"
+			          }
+			        },
+			        "all_measure.increase___decrease_revenue_goal": {
+			          "Target": {
+			            "Entity": "all_measure.increase___decrease_revenue_goal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_item"
+			            },
+			            "Object": {
+			              "Role": "all_measure.increase___decrease_revenue_goal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_items_have_increase___decrease_revenue_goal"
+			        }
+			      ]
+			    },
 			    "revenue_goal_has_all_measure_increase___decrease_revenue_goal": {
 			      "Binding": {
 			        "ConceptualEntity": "Revenue Goal"
@@ -28826,15 +29466,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_revenue_goal": {
+			    "sales_item_has_all_measure_revenue_goal": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.revenue_goal": {
@@ -28847,7 +29487,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.revenue_goal"
@@ -28855,7 +29495,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_revenue_goal"
+			          "ID": "sales_items_have_revenue_goal"
 			        }
 			      ]
 			    },
@@ -28958,15 +29598,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_revenue_forecast__change": {
+			    "sales_item_has_all_measure_revenue_forecast__change": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.revenue_forecast__change": {
@@ -28979,7 +29619,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.revenue_forecast__change"
@@ -28987,19 +29627,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_revenue_forecast__change"
+			          "ID": "sales_items_have_revenue_forecast__change"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_revenue_forecast_total": {
+			    "sales_item_has_all_measure_revenue_forecast_total": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.revenue_forecast_total": {
@@ -29012,7 +29652,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.revenue_forecast_total"
@@ -29020,19 +29660,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_revenue_forecast_total"
+			          "ID": "sales_items_have_revenue_forecast_total"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_revenue_forecast": {
+			    "sales_item_has_all_measure_revenue_forecast": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.revenue_forecast": {
@@ -29045,7 +29685,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.revenue_forecast"
@@ -29053,19 +29693,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_revenue_forecast"
+			          "ID": "sales_items_have_revenue_forecast"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_previous_year_monthly_revenue_from_YTD": {
+			    "sales_item_has_all_measure_previous_year_monthly_revenue_from_YTD": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.previous_year_monthly_revenue_from_YTD": {
@@ -29078,7 +29718,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.previous_year_monthly_revenue_from_YTD"
@@ -29086,7 +29726,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_previous_year_monthly_revenue_from_YTD"
+			          "ID": "sales_items_have_previous_year_monthly_revenue_from_YTD"
 			        }
 			      ]
 			    },
@@ -29156,15 +29796,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_increase___decrease_YoY": {
+			    "sales_item_has_all_measure_increase___decrease_YoY": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.increase___decrease_YoY": {
@@ -29177,7 +29817,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.increase___decrease_YoY"
@@ -29185,7 +29825,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_increase___decrease_YoY"
+			          "ID": "sales_items_have_increase___decrease_YoY"
 			        }
 			      ]
 			    },
@@ -29222,15 +29862,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_YTD_units_sold__display": {
+			    "sales_item_has_all_measure_YTD_units_sold__display": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.YTD_units_sold__display": {
@@ -29243,7 +29883,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.YTD_units_sold__display"
@@ -29251,7 +29891,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_YTD_units_sold__display"
+			          "ID": "sales_items_have_YTD_units_sold__display"
 			        }
 			      ]
 			    },
@@ -29288,15 +29928,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_previous_year_units_sold_from_YTD": {
+			    "sales_item_has_all_measure_previous_year_units_sold_from_YTD": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.previous_year_units_sold_from_YTD": {
@@ -29309,7 +29949,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.previous_year_units_sold_from_YTD"
@@ -29317,19 +29957,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_previous_year_units_sold_from_YTD"
+			          "ID": "sales_items_have_previous_year_units_sold_from_YTD"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_gap_from_last_year_units_sold": {
+			    "sales_item_has_all_measure_gap_from_last_year_units_sold": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.gap_from_last_year_units_sold": {
@@ -29342,7 +29982,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.gap_from_last_year_units_sold"
@@ -29350,19 +29990,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have__gap_from_last_year_units_sold"
+			          "ID": "sales_items_have__gap_from_last_year_units_sold"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_YoY__units_sold_color": {
+			    "sales_item_has_all_measure_YoY__units_sold_color": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.YoY__units_sold_color": {
@@ -29375,7 +30015,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.YoY__units_sold_color"
@@ -29383,7 +30023,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_YoY__units_sold_color"
+			          "ID": "sales_items_have_YoY__units_sold_color"
 			        }
 			      ]
 			    },
@@ -29486,6 +30126,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "sales_item_has_all_measure_average_order_value": {
+			      "Binding": {
+			        "ConceptualEntity": "sales_items"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_item": {
+			          "Target": {
+			            "Entity": "sales_item"
+			          }
+			        },
+			        "all_measure.average_order_value": {
+			          "Target": {
+			            "Entity": "all_measure.average_order_value"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_item"
+			            },
+			            "Object": {
+			              "Role": "all_measure.average_order_value"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_items_have_average_order_value"
+			        }
+			      ]
+			    },
 			    "sale_has_all_measure_average_order_value": {
 			      "Binding": {
 			        "ConceptualEntity": "sales"
@@ -29585,15 +30258,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sales_item_has_all_measure_adjusted_revenue": {
+			    "all_measure_has_adjusted_revenue": {
 			      "Binding": {
-			        "ConceptualEntity": "sales_items"
+			        "ConceptualEntity": "All Measures"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sales_item": {
+			        "all_measure": {
 			          "Target": {
-			            "Entity": "sales_item"
+			            "Entity": "all_measure"
 			          }
 			        },
 			        "all_measure.adjusted_revenue": {
@@ -29606,7 +30279,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sales_item"
+			              "Role": "all_measure"
 			            },
 			            "Object": {
 			              "Role": "all_measure.adjusted_revenue"
@@ -29614,40 +30287,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_items_have_adjusted_revenue"
-			        }
-			      ]
-			    },
-			    "percentage_adjustment_has_all_measure_adjusted_revenue": {
-			      "Binding": {
-			        "ConceptualEntity": "Percentage Adjustment"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "percentage_adjustment": {
-			          "Target": {
-			            "Entity": "percentage_adjustment"
-			          }
-			        },
-			        "all_measure.adjusted_revenue": {
-			          "Target": {
-			            "Entity": "all_measure.adjusted_revenue"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "percentage_adjustment"
-			            },
-			            "Object": {
-			              "Role": "all_measure.adjusted_revenue"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "percentage_adjustments_have_adjusted_revenue"
+			          "ID": "all_measures_have_adjusted_revenue"
 			        }
 			      ]
 			    },
@@ -30146,15 +30786,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_achievement_": {
+			    "sales_item_has_all_measure_achievement_": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.achievement_": {
@@ -30167,7 +30807,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.achievement_"
@@ -30175,7 +30815,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_achievement_"
+			          "ID": "sales_items_have_achievement_"
 			        }
 			      ]
 			    },
@@ -30278,15 +30918,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_YTD_units_sold": {
+			    "sales_item_has_all_measure_YTD_units_sold": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.YTD_units_sold": {
@@ -30299,7 +30939,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.YTD_units_sold"
@@ -30307,19 +30947,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_YTD_units_sold"
+			          "ID": "sales_items_have_YTD_units_sold"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_YoY__units_sold_change_display": {
+			    "sales_item_has_all_measure_YoY__units_sold_change_display": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.YoY__units_sold_change_display": {
@@ -30332,7 +30972,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.YoY__units_sold_change_display"
@@ -30340,19 +30980,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_YoY__units_sold_change_display"
+			          "ID": "sales_items_have_YoY__units_sold_change_display"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_YoY__units_sold_change": {
+			    "sales_item_has_all_measure_YoY__units_sold_change": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.YoY__units_sold_change": {
@@ -30365,7 +31005,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.YoY__units_sold_change"
@@ -30373,19 +31013,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_YoY__units_sold_change"
+			          "ID": "sales_items_have_YoY__units_sold_change"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_previous_year_sales": {
+			    "sales_item_has_all_measure_previous_year_sales": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.previous_year_sales": {
@@ -30398,7 +31038,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.previous_year_sales"
@@ -30406,19 +31046,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_previous_year_sales"
+			          "ID": "sales_items_have_previous_year_sales"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_YoY__revenue_change_display": {
+			    "sales_item_has_all_measure_YoY__revenue_change_display": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.YoY__revenue_change_display": {
@@ -30431,7 +31071,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.YoY__revenue_change_display"
@@ -30439,7 +31079,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_YoY__revenue_change_display"
+			          "ID": "sales_items_have_YoY__revenue_change_display"
 			        }
 			      ]
 			    },
@@ -30476,6 +31116,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "sales_item_has_all_measure_previous_year_profit_color": {
+			      "Binding": {
+			        "ConceptualEntity": "sales_items"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_item": {
+			          "Target": {
+			            "Entity": "sales_item"
+			          }
+			        },
+			        "all_measure.previous_year_profit_color": {
+			          "Target": {
+			            "Entity": "all_measure.previous_year_profit_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_item"
+			            },
+			            "Object": {
+			              "Role": "all_measure.previous_year_profit_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_items_have__previous_year_profit_color"
+			        }
+			      ]
+			    },
 			    "sale_has_all_measure_previous_year_profit_color": {
 			      "Binding": {
 			        "ConceptualEntity": "sales"
@@ -30506,6 +31179,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "sales_have__previous_year_profit_color"
+			        }
+			      ]
+			    },
+			    "sales_item_has_all_measure_YTD_profit__display": {
+			      "Binding": {
+			        "ConceptualEntity": "sales_items"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_item": {
+			          "Target": {
+			            "Entity": "sales_item"
+			          }
+			        },
+			        "all_measure.YTD_profit__display": {
+			          "Target": {
+			            "Entity": "all_measure.YTD_profit__display"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_item"
+			            },
+			            "Object": {
+			              "Role": "all_measure.YTD_profit__display"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_items_have_YTD_profit__display"
 			        }
 			      ]
 			    },
@@ -30575,6 +31281,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "sales_item_has_all_measure_gap_from_last_year_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "sales_items"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_item": {
+			          "Target": {
+			            "Entity": "sales_item"
+			          }
+			        },
+			        "all_measure.gap_from_last_year_profit": {
+			          "Target": {
+			            "Entity": "all_measure.gap_from_last_year_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_item"
+			            },
+			            "Object": {
+			              "Role": "all_measure.gap_from_last_year_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_items_have__gap_from_last_year_profit"
+			        }
+			      ]
+			    },
 			    "sale_has_all_measure_gap_from_last_year_profit": {
 			      "Binding": {
 			        "ConceptualEntity": "sales"
@@ -30641,66 +31380,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sales_item_has_total_revenue_lineTotal__taxAmount": {
-			      "Binding": {
-			        "ConceptualEntity": "sales_items"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sales_item": {
-			          "Target": {
-			            "Entity": "sales_item"
-			          }
-			        },
-			        "sales_item.total_revenue_lineTotal__taxAmount": {
-			          "Target": {
-			            "Entity": "sales_item.total_revenue_lineTotal__taxAmount"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sales_item"
-			            },
-			            "Object": {
-			              "Role": "sales_item.total_revenue_lineTotal__taxAmount"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sales_items_have_total_revenue_lineTotal__taxAmount"
-			        },
-			        {
-			          "Adjective": {
-			            "Subject": {
-			              "Role": "sales_item"
-			            },
-			            "Adjectives": [
-			              {
-			                "expensive": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Antonyms": [
-			              {
-			                "cheap": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Measurement": {
-			              "Role": "sales_item.total_revenue_lineTotal__taxAmount"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "total_revenue_lineTotal__taxAmount_indicates_how_expensive_sales_items_are"
-			        }
-			      ]
-			    },
 			    "datedate_has_datedate": {
 			      "Binding": {
 			        "ConceptualEntity": "Date(Date)"
@@ -30747,15 +31426,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_MoM__units_sold_color_from_MTD": {
+			    "sales_item_has_all_measure_MoM__units_sold_color_from_MTD": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.MoM__units_sold_color_from_MTD": {
@@ -30768,7 +31447,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.MoM__units_sold_color_from_MTD"
@@ -30776,19 +31455,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_MoM__units_sold_color_from_MTD"
+			          "ID": "sales_items_have_MoM__units_sold_color_from_MTD"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_MoM__revenue_color_from_MTD": {
+			    "sales_item_has_all_measure_MoM__revenue_color_from_MTD": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.MoM__revenue_color_from_MTD": {
@@ -30801,7 +31480,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.MoM__revenue_color_from_MTD"
@@ -30809,19 +31488,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_MoM__revenue_color_from_MTD"
+			          "ID": "sales_items_have_MoM__revenue_color_from_MTD"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_previous_year_revenue_color": {
+			    "sales_item_has_all_measure_previous_year_revenue_color": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.previous_year_revenue_color": {
@@ -30834,7 +31513,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.previous_year_revenue_color"
@@ -30842,7 +31521,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have__previous_year_revenue_color"
+			          "ID": "sales_items_have__previous_year_revenue_color"
 			        }
 			      ]
 			    },
@@ -30879,15 +31558,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_YTD_revenue__display": {
+			    "sales_item_has_all_measure_YTD_revenue__display": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.YTD_revenue__display": {
@@ -30900,7 +31579,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.YTD_revenue__display"
@@ -30908,7 +31587,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_YTD_revenue__display"
+			          "ID": "sales_items_have_YTD_revenue__display"
 			        }
 			      ]
 			    },
@@ -30945,15 +31624,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_gap_from_last_year_revenue": {
+			    "sales_item_has_all_measure_gap_from_last_year_revenue": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.gap_from_last_year_revenue": {
@@ -30966,7 +31645,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.gap_from_last_year_revenue"
@@ -30974,19 +31653,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have__gap_from_last_year_revenue"
+			          "ID": "sales_items_have__gap_from_last_year_revenue"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_previous_year_revenue_from_YTD": {
+			    "sales_item_has_all_measure_previous_year_revenue_from_YTD": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.previous_year_revenue_from_YTD": {
@@ -30999,7 +31678,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.previous_year_revenue_from_YTD"
@@ -31007,7 +31686,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_previous_year_revenue_from_YTD"
+			          "ID": "sales_items_have_previous_year_revenue_from_YTD"
 			        }
 			      ]
 			    },
@@ -31044,15 +31723,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_MTD_units_sold__display": {
+			    "sales_item_has_all_measure_MTD_units_sold__display": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.MTD_units_sold__display": {
@@ -31065,7 +31744,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.MTD_units_sold__display"
@@ -31073,7 +31752,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_MTD_units_sold__display"
+			          "ID": "sales_items_have_MTD_units_sold__display"
 			        }
 			      ]
 			    },
@@ -31110,15 +31789,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_MoM__sales_quantity_change": {
+			    "sales_item_has_all_measure_MoM__sales_quantity_change": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.MoM__sales_quantity_change": {
@@ -31131,7 +31810,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.MoM__sales_quantity_change"
@@ -31139,19 +31818,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_MoM__sales_quantity_change"
+			          "ID": "sales_items_have_MoM__sales_quantity_change"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_previous_month_sales_quantity_from_MTD": {
+			    "sales_item_has_all_measure_previous_month_sales_quantity_from_MTD": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.previous_month_sales_quantity_from_MTD": {
@@ -31164,7 +31843,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.previous_month_sales_quantity_from_MTD"
@@ -31172,19 +31851,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_previous_month_sales_quantity_from_MTD"
+			          "ID": "sales_items_have_previous_month_sales_quantity_from_MTD"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_previous_month_sales": {
+			    "sales_item_has_all_measure_previous_month_sales": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.previous_month_sales": {
@@ -31197,7 +31876,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.previous_month_sales"
@@ -31205,19 +31884,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_previous_month_sales"
+			          "ID": "sales_items_have_previous_month_sales"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_MTD_units_sold": {
+			    "sales_item_has_all_measure_MTD_units_sold": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.MTD_units_sold": {
@@ -31230,7 +31909,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.MTD_units_sold"
@@ -31238,19 +31917,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_MTD_units_sold"
+			          "ID": "sales_items_have_MTD_units_sold"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_units_sold": {
+			    "sales_item_has_all_measure_units_sold": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.units_sold": {
@@ -31263,7 +31942,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.units_sold"
@@ -31271,19 +31950,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_units_sold"
+			          "ID": "sales_items_have_units_sold"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_MTD_revenue__display": {
+			    "sales_item_has_all_measure_MTD_revenue__display": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.MTD_revenue__display": {
@@ -31296,7 +31975,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.MTD_revenue__display"
@@ -31304,7 +31983,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_MTD_revenue__display"
+			          "ID": "sales_items_have_MTD_revenue__display"
 			        }
 			      ]
 			    },
@@ -31506,7 +32185,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "customer_has_all_measure_new_customers": {
+			    "customer_has_all_measure_YTD_new_customers": {
 			      "Binding": {
 			        "ConceptualEntity": "customers"
 			      },
@@ -31517,9 +32196,9 @@ cultureInfo en-US
 			            "Entity": "customer"
 			          }
 			        },
-			        "all_measure.new_customers": {
+			        "all_measure.YTD_new_customers": {
 			          "Target": {
-			            "Entity": "all_measure.new_customers"
+			            "Entity": "all_measure.YTD_new_customers"
 			          }
 			        }
 			      },
@@ -31530,12 +32209,12 @@ cultureInfo en-US
 			              "Role": "customer"
 			            },
 			            "Object": {
-			              "Role": "all_measure.new_customers"
+			              "Role": "all_measure.YTD_new_customers"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "customers_have_new_customers"
+			          "ID": "customers_have_YTD_new_customers"
 			        }
 			      ]
 			    },
@@ -31605,15 +32284,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_gap_last_month_revenue_color": {
+			    "sales_item_has_all_measure_gap_last_month_revenue_color": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.gap_last_month_revenue_color": {
@@ -31626,7 +32305,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.gap_last_month_revenue_color"
@@ -31634,7 +32313,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have__gap_last_month_revenue_color"
+			          "ID": "sales_items_have__gap_last_month_revenue_color"
 			        }
 			      ]
 			    },
@@ -31671,15 +32350,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_YoY__revenue_color": {
+			    "sales_item_has_all_measure_YoY__revenue_color": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.YoY__revenue_color": {
@@ -31692,7 +32371,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.YoY__revenue_color"
@@ -31700,19 +32379,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_YoY__revenue_color"
+			          "ID": "sales_items_have_YoY__revenue_color"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_gap_from_last_month_revenue": {
+			    "sales_item_has_all_measure_gap_from_last_month_revenue": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.gap_from_last_month_revenue": {
@@ -31725,7 +32404,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.gap_from_last_month_revenue"
@@ -31733,7 +32412,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have__gap_from_last_month_revenue"
+			          "ID": "sales_items_have__gap_from_last_month_revenue"
 			        }
 			      ]
 			    },
@@ -31935,15 +32614,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_YoY__revenue_change": {
+			    "sales_item_has_all_measure_YoY__revenue_change": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.YoY__revenue_change": {
@@ -31956,7 +32635,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.YoY__revenue_change"
@@ -31964,19 +32643,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_YoY__revenue_change"
+			          "ID": "sales_items_have_YoY__revenue_change"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_previous_year_revenue": {
+			    "sales_item_has_all_measure_previous_year_revenue": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.previous_year_revenue": {
@@ -31989,7 +32668,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.previous_year_revenue"
@@ -31997,19 +32676,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_previous_year_revenue"
+			          "ID": "sales_items_have_previous_year_revenue"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_MoM__revenue_change": {
+			    "sales_item_has_all_measure_MoM__revenue_change": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.MoM__revenue_change": {
@@ -32022,7 +32701,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.MoM__revenue_change"
@@ -32030,7 +32709,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_MoM__revenue_change"
+			          "ID": "sales_items_have_MoM__revenue_change"
 			        }
 			      ]
 			    },
@@ -32160,15 +32839,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_previous_month_revenue_from_MTD": {
+			    "sales_item_has_all_measure_previous_month_revenue_from_MTD": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.previous_month_revenue_from_MTD": {
@@ -32181,7 +32860,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.previous_month_revenue_from_MTD"
@@ -32189,19 +32868,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_previous_month_revenue_from_MTD"
+			          "ID": "sales_items_have_previous_month_revenue_from_MTD"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_previous_month_revenue": {
+			    "sales_item_has_all_measure_previous_month_revenue": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.previous_month_revenue": {
@@ -32214,7 +32893,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.previous_month_revenue"
@@ -32222,19 +32901,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_previous_month_revenue"
+			          "ID": "sales_items_have_previous_month_revenue"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_prev_month_revenue_PREVIOUSMONTH": {
+			    "sales_item_has_all_measure_prev_month_revenue_PREVIOUSMONTH": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.prev_month_revenue_PREVIOUSMONTH": {
@@ -32247,7 +32926,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.prev_month_revenue_PREVIOUSMONTH"
@@ -32255,19 +32934,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_prev_month_revenue_PREVIOUSMONTH"
+			          "ID": "sales_items_have_prev_month_revenue_PREVIOUSMONTH"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_YTD_revenue": {
+			    "sales_item_has_all_measure_YTD_revenue": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.YTD_revenue": {
@@ -32280,7 +32959,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.YTD_revenue"
@@ -32288,19 +32967,19 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_YTD_revenue"
+			          "ID": "sales_items_have_YTD_revenue"
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_MTD_revenue": {
+			    "sales_item_has_all_measure_MTD_revenue": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.MTD_revenue": {
@@ -32313,7 +32992,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.MTD_revenue"
@@ -32321,7 +33000,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_MTD_revenue"
+			          "ID": "sales_items_have_MTD_revenue"
 			        }
 			      ]
 			    },
@@ -38211,15 +38890,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_total_revenue": {
+			    "sales_item_has_all_measure_total_revenue": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.total_revenue": {
@@ -38232,7 +38911,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.total_revenue"
@@ -38240,7 +38919,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have_total_revenue"
+			          "ID": "sales_items_have_total_revenue"
 			        }
 			      ]
 			    },
@@ -39741,6 +40420,66 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "sales_item_is_expensive2": {
+			      "Binding": {
+			        "ConceptualEntity": "sales_items"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_item": {
+			          "Target": {
+			            "Entity": "sales_item"
+			          }
+			        },
+			        "sales_item.shipping_cost": {
+			          "Target": {
+			            "Entity": "sales_item.shipping_cost"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "sales_item"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "sales_item.shipping_cost"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "shipping_cost_indicates_how_expensive_sales_items_are"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_item"
+			            },
+			            "Object": {
+			              "Role": "sales_item.shipping_cost"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_items_have_shipping_costs"
+			        }
+			      ]
+			    },
 			    "sale_is_return_requested": {
 			      "Binding": {
 			        "ConceptualEntity": "sales"
@@ -39905,303 +40644,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dynamic_rev_unit_prof_lines_have_dynamic_rev_unit_prof_lines"
-			        }
-			      ]
-			    },
-			    "sale_has_all_measure_increase___decrease_revenue_goal": {
-			      "Binding": {
-			        "ConceptualEntity": "sales"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sale": {
-			          "Target": {
-			            "Entity": "sale"
-			          }
-			        },
-			        "all_measure.increase___decrease_revenue_goal": {
-			          "Target": {
-			            "Entity": "all_measure.increase___decrease_revenue_goal"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sale"
-			            },
-			            "Object": {
-			              "Role": "all_measure.increase___decrease_revenue_goal"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sales_have_increase___decrease_revenue_goal"
-			        }
-			      ]
-			    },
-			    "measure_selection_has_all_measure_dynamic_line_value": {
-			      "Binding": {
-			        "ConceptualEntity": "Measure Selection"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "measure_selection": {
-			          "Target": {
-			            "Entity": "measure_selection"
-			          }
-			        },
-			        "all_measure.dynamic_line_value": {
-			          "Target": {
-			            "Entity": "all_measure.dynamic_line_value"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "measure_selection"
-			            },
-			            "Object": {
-			              "Role": "all_measure.dynamic_line_value"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "measure_selections_have_dynamic_line_value"
-			        }
-			      ]
-			    },
-			    "sale_has_all_measure_dynamic_line_value": {
-			      "Binding": {
-			        "ConceptualEntity": "sales"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sale": {
-			          "Target": {
-			            "Entity": "sale"
-			          }
-			        },
-			        "all_measure.dynamic_line_value": {
-			          "Target": {
-			            "Entity": "all_measure.dynamic_line_value"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sale"
-			            },
-			            "Object": {
-			              "Role": "all_measure.dynamic_line_value"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sales_have_dynamic_line_value"
-			        }
-			      ]
-			    },
-			    "dynamic_rev_unit_prof_line_has_all_measure_unitsrevenueprofit_region__country_title": {
-			      "Binding": {
-			        "ConceptualEntity": "Dynamic Rev, Unit, Prof, Line"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dynamic_rev_unit_prof_line": {
-			          "Target": {
-			            "Entity": "dynamic_rev_unit_prof_line"
-			          }
-			        },
-			        "all_measure.unitsrevenueprofit_region__country_title": {
-			          "Target": {
-			            "Entity": "all_measure.unitsrevenueprofit_region__country_title"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dynamic_rev_unit_prof_line"
-			            },
-			            "Object": {
-			              "Role": "all_measure.unitsrevenueprofit_region__country_title"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dynamic_rev_unit_prof_lines_have_unitsrevenueprofit_region__country_title"
-			        }
-			      ]
-			    },
-			    "salesperson_has_all_measure_unitsrevenueprofit_region__country_title": {
-			      "Binding": {
-			        "ConceptualEntity": "salespeople"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "salesperson": {
-			          "Target": {
-			            "Entity": "salesperson"
-			          }
-			        },
-			        "all_measure.unitsrevenueprofit_region__country_title": {
-			          "Target": {
-			            "Entity": "all_measure.unitsrevenueprofit_region__country_title"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "salesperson"
-			            },
-			            "Object": {
-			              "Role": "all_measure.unitsrevenueprofit_region__country_title"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "salespeople_have_unitsrevenueprofit_region__country_title"
-			        }
-			      ]
-			    },
-			    "sale_has_all_measure_last_purchase_date": {
-			      "Binding": {
-			        "ConceptualEntity": "sales"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "sale": {
-			          "Target": {
-			            "Entity": "sale"
-			          }
-			        },
-			        "all_measure.last_purchase_date": {
-			          "Target": {
-			            "Entity": "all_measure.last_purchase_date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "sale"
-			            },
-			            "Object": {
-			              "Role": "all_measure.last_purchase_date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "sales_have_last_purchase_date"
-			        }
-			      ]
-			    },
-			    "revenue_goal_has_revenue_goal": {
-			      "Binding": {
-			        "ConceptualEntity": "Revenue Goal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "revenue_goal": {
-			          "Target": {
-			            "Entity": "revenue_goal"
-			          }
-			        },
-			        "revenue_goal.revenue_goal": {
-			          "Target": {
-			            "Entity": "revenue_goal.revenue_goal"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "revenue_goal"
-			            },
-			            "Object": {
-			              "Role": "revenue_goal.revenue_goal"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "revenue_goals_have_revenue_goals"
-			        }
-			      ]
-			    },
-			    "revenue_goal_has_revenue_goal_value": {
-			      "Binding": {
-			        "ConceptualEntity": "Revenue Goal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "revenue_goal": {
-			          "Target": {
-			            "Entity": "revenue_goal"
-			          }
-			        },
-			        "revenue_goal.revenue_goal_value": {
-			          "Target": {
-			            "Entity": "revenue_goal.revenue_goal_value"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "revenue_goal"
-			            },
-			            "Object": {
-			              "Role": "revenue_goal.revenue_goal_value"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "revenue_goals_have_revenue_goal_value"
-			        }
-			      ]
-			    },
-			    "measure_selection_has_measure_name": {
-			      "Binding": {
-			        "ConceptualEntity": "Measure Selection"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "measure_selection": {
-			          "Target": {
-			            "Entity": "measure_selection"
-			          }
-			        },
-			        "measure_selection.measure_name": {
-			          "Target": {
-			            "Entity": "measure_selection.measure_name"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "measure_selection"
-			            },
-			            "Object": {
-			              "Role": "measure_selection.measure_name"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "measure_selections_have_measure_names"
 			        }
 			      ]
 			    },
@@ -40502,15 +40944,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_revenue_share": {
+			    "sales_item_has_all_measure_revenue_share": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.revenue_share": {
@@ -40523,7 +40965,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.revenue_share"
@@ -40531,7 +40973,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have__revenue_share"
+			          "ID": "sales_items_have__revenue_share"
 			        }
 			      ]
 			    },
@@ -40601,15 +41043,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "sale_has_all_measure_previous_year_units_sold_color": {
+			    "sales_item_has_all_measure_previous_year_units_sold_color": {
 			      "Binding": {
-			        "ConceptualEntity": "sales"
+			        "ConceptualEntity": "sales_items"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "sale": {
+			        "sales_item": {
 			          "Target": {
-			            "Entity": "sale"
+			            "Entity": "sales_item"
 			          }
 			        },
 			        "all_measure.previous_year_units_sold_color": {
@@ -40622,7 +41064,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "sale"
+			              "Role": "sales_item"
 			            },
 			            "Object": {
 			              "Role": "all_measure.previous_year_units_sold_color"
@@ -40630,7 +41072,7 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "sales_have__previous_year_units_sold_color"
+			          "ID": "sales_items_have__previous_year_units_sold_color"
 			        }
 			      ]
 			    },
@@ -40961,6 +41403,72 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "sales_have_customers_bought_this_month"
+			        }
+			      ]
+			    },
+			    "sales_item_has_total_amount": {
+			      "Binding": {
+			        "ConceptualEntity": "sales_items"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "sales_item": {
+			          "Target": {
+			            "Entity": "sales_item"
+			          }
+			        },
+			        "sales_item.total_amount": {
+			          "Target": {
+			            "Entity": "sales_item.total_amount"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "sales_item"
+			            },
+			            "Object": {
+			              "Role": "sales_item.total_amount"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "sales_items_have_total_amounts"
+			        }
+			      ]
+			    },
+			    "customer_has_all_measure_MTD_new_customers": {
+			      "Binding": {
+			        "ConceptualEntity": "customers"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "customer": {
+			          "Target": {
+			            "Entity": "customer"
+			          }
+			        },
+			        "all_measure.MTD_new_customers": {
+			          "Target": {
+			            "Entity": "all_measure.MTD_new_customers"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "customer"
+			            },
+			            "Object": {
+			              "Role": "all_measure.MTD_new_customers"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "customers_have_MTD_new_customers"
 			        }
 			      ]
 			    },

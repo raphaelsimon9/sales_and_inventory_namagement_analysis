@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
-  "name": "9888ac4485ff93b55939",
+  "name": "c1aba29ff16364a4470e",
   "position": {
-    "x": 406.17694048728532,
-    "y": 304,
-    "z": 2000,
-    "height": 221,
+    "x": 407.17694048728532,
+    "y": 304.75,
+    "z": 1500,
+    "height": 221.25,
     "width": 474,
-    "tabOrder": 16000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -27,9 +27,8 @@
                 }
               },
               "queryRef": "sales_items.productName",
-              "nativeQueryRef": "Product Name",
-              "active": true,
-              "displayName": "Product Name"
+              "nativeQueryRef": "productName",
+              "active": true
             }
           ]
         },
@@ -37,23 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "sales_items"
-                        }
-                      },
-                      "Property": "Total Revenue (lineTotal & taxAmount)"
+                    "SourceRef": {
+                      "Entity": "All Measures"
                     }
                   },
-                  "Function": 0
+                  "Property": "Total Revenue"
                 }
               },
-              "queryRef": "Sum(sales_items.Total Revenue (lineTotal & taxAmount))",
-              "nativeQueryRef": "Total Revenue",
-              "displayName": "Total Revenue"
+              "queryRef": "All Measures.Total Revenue",
+              "nativeQueryRef": "Total Revenue"
             }
           ]
         }
@@ -62,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "sales_items"
-                      }
-                    },
-                    "Property": "Total Revenue (lineTotal & taxAmount)"
+                  "SourceRef": {
+                    "Entity": "All Measures"
                   }
                 },
-                "Function": 0
+                "Property": "Total Revenue"
               }
             },
             "direction": "Descending"
@@ -120,31 +108,17 @@
       "categoryAxis": [
         {
           "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "preferredCategoryWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             },
@@ -155,10 +129,24 @@
                 }
               }
             },
-            "preferredCategoryWidth": {
+            "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -168,13 +156,6 @@
       "valueAxis": [
         {
           "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "show": {
               "expr": {
                 "Literal": {
@@ -193,6 +174,13 @@
               "expr": {
                 "Literal": {
                   "Value": "8D"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             },
@@ -214,7 +202,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#1F4761'"
+                      "Value": "'#144E75'"
                     }
                   }
                 }
@@ -233,6 +221,13 @@
                 }
               }
             },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'InsideEnd'"
+                }
+              }
+            },
             "labelOrientation": {
               "expr": {
                 "Literal": {
@@ -247,13 +242,6 @@
                 }
               }
             },
-            "enableDetailDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "enableBackground": {
               "expr": {
                 "Literal": {
@@ -261,17 +249,10 @@
                 }
               }
             },
-            "labelPosition": {
+            "enableDetailDataLabel": {
               "expr": {
                 "Literal": {
-                  "Value": "'InsideEnd'"
-                }
-              }
-            },
-            "backgroundTransparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "35L"
+                  "Value": "false"
                 }
               }
             },
@@ -290,6 +271,13 @@
                       "Value": "'#E5E5E5'"
                     }
                   }
+                }
+              }
+            },
+            "backgroundTransparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "35L"
                 }
               }
             }
@@ -315,17 +303,10 @@
                 }
               }
             },
-            "fontFamily": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
+                  "Value": "true"
                 }
               }
             },
@@ -336,10 +317,31 @@
                 }
               }
             },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
             "text": {
               "expr": {
                 "Literal": {
                   "Value": "'Top 5 Products Generating The Most Revenue'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -353,6 +355,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -369,7 +378,7 @@
                 }
               }
             },
-            "right": {
+            "bottom": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
@@ -383,7 +392,7 @@
                 }
               }
             },
-            "bottom": {
+            "right": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
@@ -393,24 +402,26 @@
           }
         }
       ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
       "visualTooltip": [
         {
           "properties": {
-            "show": {
+            "section": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "themedBackground": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#144E75'"
-                    }
-                  }
+                  "Value": "'___AUTO___'"
                 }
               }
             },
@@ -450,10 +461,34 @@
                 }
               }
             },
+            "themedBackground": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#144E75'"
+                    }
+                  }
+                }
+              }
+            },
             "transparency": {
               "expr": {
                 "Literal": {
                   "Value": "30D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "spacing": [
+        {
+          "properties": {
+            "verticalSpacing": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -467,80 +502,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "53ffdc18c804495a9668",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Calendar"
-              }
-            },
-            "Property": "Month Name"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "c",
-              "Entity": "Calendar",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "c"
-                              }
-                            },
-                            "Property": "Month Name"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "ec40df197b26c972bedc",
+        "name": "e8c5b009f70d9a139a73",
         "field": {
           "Column": {
             "Expression": {
@@ -566,6 +528,11 @@
                         "Name": "s",
                         "Entity": "sales_items",
                         "Type": 0
+                      },
+                      {
+                        "Name": "a",
+                        "Entity": "All Measures",
+                        "Type": 0
                       }
                     ],
                     "Select": [
@@ -585,18 +552,13 @@
                       {
                         "Direction": 2,
                         "Expression": {
-                          "Aggregation": {
+                          "Measure": {
                             "Expression": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "s"
-                                  }
-                                },
-                                "Property": "Total Revenue (lineTotal & taxAmount)"
+                              "SourceRef": {
+                                "Source": "a"
                               }
                             },
-                            "Function": 0
+                            "Property": "Total Revenue"
                           }
                         }
                       }
